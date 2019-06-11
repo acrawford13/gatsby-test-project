@@ -35,8 +35,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "prettier": "prettier --write './src/**/*.{js,json,css}' --loglevel silent"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
@@ -51,9 +50,9 @@
     }
   },
   "lint-staged": {
-    "./src/**/*.{js,json,css,md}": [
+    "./src/**/*.{js,jsx}": [
       "yarn test:once",
-      "yarn prettier",
+      "yarn format",
       "git add"
     ]
   }
