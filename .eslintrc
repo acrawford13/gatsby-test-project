@@ -1,0 +1,70 @@
+{
+  "plugins": ["react", "prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 120
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    },
+    "react": {
+      "version": "16.3.2"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*test.js"],
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "tabWidth": 2,
+            "ignorePattern": "^\\s*it\\(",
+            "ignoreComments": true,
+            "ignoreUrls": true
+          }
+        ]
+      },
+      "globals": {
+        "mount": true,
+        "shallow": true,
+        "render": true,
+        "create": true,
+        "axe": true,
+        "renderToHtml": true,
+        "describe": true,
+        "beforeEach": true,
+        "inject": true,
+        "it": true,
+        "test": true,
+        "expect": true,
+        "afterEach": true
+      }
+    }
+  ]
+}

@@ -19,6 +19,10 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -39,5 +43,17 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{js,json,css,md}": [
+      "yarn test:once",
+      "yarn prettier",
+      "git add"
+    ]
   }
 }
