@@ -51,7 +51,6 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx}": [
-      "yarn test:once",
       "yarn format",
       "git add"
     ]
