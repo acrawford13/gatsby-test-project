@@ -17,6 +17,4 @@ Estabelecimentos de Alojamento Local (Short Term Rental) are those providing tem
 
 There are several types of establishments in which your Alojamento Local can operate:
 
-
-
-<TestComponent text="texthere" />
+<panel></panel>
