@@ -1,0 +1,293 @@
+@mixin style-from-map($map) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  };
+}
+
+$t500: #2accdd;
+$n200: #EAEBED;
+$n500: #868A96;
+$n800: #3D3F46;
+$cn100: #f7f8fc;
+$b100: #E9F4FF;
+$white: #ffffff;
+
+$primary:$t500;
+$text-color: $n800;
+
+$box-shadow: 0 0.5rem 0.7rem 0 rgba(0,0,0,0.1);
+
+$spacing: (
+  xxxs: 0.2rem,
+  xxs: 0.4rem,
+  xs: 0.8rem,
+  s: 1.2rem,
+  m: 1.6rem,
+  l: 2.4rem,
+  xl: 3.2rem,
+  xxl: 4.0rem,
+  xxxl: 4.8rem,
+);
+
+$text: (
+  s: (
+    font-size: 1.2rem,
+    line-height: 1.6rem,
+    letter-spacing: 0.02rem,
+  ),
+  m: (
+    font-size: 1.4rem,
+    line-height: 2.2rem,
+  ),
+  l: (
+    font-size: 1.6rem,
+    line-height: 2.4rem,
+  ),
+  xl: (
+    font-size: 1.8rem,
+    line-height: 2.4rem,
+  ),
+);
+
+@mixin text($size) {
+  @include style-from-map(map-get($text, $size));
+}
+
+$headings: (
+  s: (
+    font-size: 1.8rem,
+    line-height: 2.4rem,
+    letter-spacing: 0.01rem,
+  ),
+  m: (
+    font-size: 2.4rem,
+    line-height: 3.2rem,
+  ),
+  l: (
+    font-size: 3.6rem,
+    line-height: 4.0rem,
+  ),
+);
+
+@mixin heading($size) {
+  @include style-from-map(map-get($headings, $size));
+}
+
+#___gatsby {
+  &,
+  & > div {
+    height: 100%;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+html,
+body,
+form,
+input,
+textarea,
+button {
+  font-family: "Fira Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: $n800;
+}
+
+p {
+  @include text(l);
+}
+
+strong {
+  font-weight: 500;
+}
+
+html {
+  font-size: 10px;
+}
+
+::selection {
+  background-color: $b100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// layout
+.layout {
+  background-color: $cn100;
+
+  &--sidebar {
+    display: flex;
+    height: 100%;
+  
+    .content-wrapper {
+      overflow-y: auto;
+      flex-grow: 1;
+      padding: 6rem;
+  
+      .content {
+        border-radius: 0.4rem;
+        box-shadow: $box-shadow;
+        border: 1px solid $n200;
+        background-color: $white;
+        padding: 5.5rem;
+      }
+    }
+  }
+}
+
+.sidebar {
+  background: $white;
+  max-width: 40.6rem;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  &__content {
+    padding: 3.2rem 4rem;
+  }
+
+  &__logo {
+    width: 17.6rem;
+  }
+
+  &__nav {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          text-decoration: none;
+          color: $n800;
+          padding: map-get($spacing, m) 0;
+          display: block;
+          border-bottom: 1px solid $n200;
+          @include heading(s);
+        }
+      }
+    }
+  }
+
+  .sidebar-heading {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+
+    &__title {
+      @include heading(s);
+      margin: 0;
+      position: relative;
+      padding-bottom: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+      color: $n800;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $primary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &__subtitle {
+      @include heading(s);
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $n200;
+    padding: map-get($spacing, l);
+    color: $n800;
+    @include text(m);
+    margin-top: auto;
+    flex-wrap: wrap;
+  }
+}
+
+// guides
+.page-heading {
+  margin-bottom: 11.2rem;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    @include heading(l);
+    text-align: center;
+    margin: 0;
+    position: relative;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
+    font-weight: 500;
+    color: $text-color;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 10rem;
+      height: 0.4rem;
+      background-color: $primary;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__subtitle {
+    @include heading(l);
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    color: $text-color;
+  };
+}
+
+.inner-content {
+  h1 {
+    @include heading(m);
+    font-weight: 500;
+    margin-top: 5.5rem;
+  }
+
+  blockquote {
+    color: $n500;
+    margin: 0;
+    font-style: italic;
+  }
+}
+
+.panel {
+  box-shadow: $box-shadow;
+  border: 1px solid $n200;
+  max-height: 200px;
+  padding: map-get($spacing, m);
+  width: 50%;
+  @include text(m);
+
+  &__heading {
+    @include text(l);
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: map-get($spacing, m);
+  }
+}

@@ -20,9 +20,25 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-component`],
+    //     // TODO: add names of specific components to allow in gatsby-remark-component
+    //   },
+    // },
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        plugins: [`gatsby-remark-autolink-headers`],
+        // TODO: add names of specific components to allow in gatsby-remark-component
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,4 +62,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
-}
+};
