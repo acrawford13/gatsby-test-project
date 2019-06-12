@@ -2,7 +2,7 @@ import CMS from 'netlify-cms-app';
 
 import GuidesPreview from './preview-templates/GuidesPreview.js';
 import React, { Component } from 'react';
-import Panel from '../components/atoms/Panel/Panel';
+import Panel, { PanelWrapper } from '../components/atoms/Panel/Panel';
 import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
 import { StyleSheetManager } from 'styled-components';
 
@@ -18,9 +18,9 @@ const PreviewWindow = props => {
 
   const mdxProps = {
     // This key represents html elements used in markdown; h1, p, etc
-    components: { Panel: Panel },
+    components: { Panel, PanelWrapper },
     // Pass components used in the editor (and shared throughout mdx) here:
-    scope: { Panel: Panel },
+    scope: { Panel, PanelWrapper },
     mdPlugins: [],
   };
 

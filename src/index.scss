@@ -5,6 +5,7 @@
 }
 
 $t500: #2accdd;
+$t700: #198D9B;
 $n200: #EAEBED;
 $n500: #868A96;
 $n800: #3D3F46;
@@ -226,7 +227,7 @@ html {
 // guides
 .page-heading {
   margin-bottom: 11.2rem;
-  max-width: 60%;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -279,15 +280,40 @@ html {
 .panel {
   box-shadow: $box-shadow;
   border: 1px solid $n200;
-  max-height: 200px;
   padding: map-get($spacing, m);
-  width: 50%;
   @include text(m);
+  margin: 1.2rem;
+  flex-shrink: 1;
+  flex-basis: calc(50% - 2.4rem);
+  display: flex;
+  flex-direction: column;
+
+  &--collapsed {
+    max-height: 200px;
+  }
 
   &__heading {
     @include text(l);
     font-weight: 500;
     margin: 0;
     margin-bottom: map-get($spacing, m);
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1.2rem;
+  }
+
+  &__toggle {
+    color: $t700;
+    cursor: pointer;
+    font-weight: 500;
+    display: block;
+    margin-top: map-get($spacing, m);
   }
 }

@@ -15,19 +15,25 @@ export const GuidesTemplate = ({ title, subtitle, content, contentComponent }) =
   );
 };
 
-const Guides = ({ data }) => {
-  const { mdx: post } = data;
-  return (
-    <Layout data={data}>
-      <GuidesTemplate
-        title={post.frontmatter.title}
-        subtitle={post.frontmatter.subtitle}
-        content={post.code.body}
-        contentComponent={HTMLContent}
-      />
-    </Layout>
-  );
-};
+class Guides extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    const { mdx: post } = this.props.data;
+    return (
+      <Layout data={this.props.data}>
+        <GuidesTemplate
+          title={post.frontmatter.title}
+          subtitle={post.frontmatter.subtitle}
+          content={post.code.body}
+          contentComponent={HTMLContent}
+        />
+      </Layout>
+    );
+  }
+}
 
 export const pageQuery = graphql`
   query GuideById($id: String!) {
