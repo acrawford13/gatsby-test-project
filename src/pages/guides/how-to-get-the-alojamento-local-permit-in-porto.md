@@ -18,6 +18,8 @@ Estabelecimentos de Alojamento Local (Short Term Rental) are those providing tem
 
 There are several types of establishments in which your Alojamento Local can operate:
 
+<PanelWrapper><Panel heading="asdasd">dddddd</Panel></PanelWrapper>
+
 <PanelWrapper>
 
 <Panel heading="Single-family detached home">Alojamento local establishment whose unit of accommodation is constituted by an autonomous building, of a single-family house</Panel>
