@@ -19,3 +19,5 @@ Estabelecimentos de Alojamento Local (Short Term Rental) are those providing tem
 There are several types of establishments in which your Alojamento Local can operate:
 
 <PanelWrapper><Panel heading="asdasd">dddddd</Panel></PanelWrapper>
+<Note>Note: When placing the check ✓ in the Transmissões Intracomunitárias, corresponding to the VAT Information Exchange System (VIES), - when you create your property profile in the booking platforms, you must then inform them that you activated the VIES and future invoices with their commission must not include VAT.</Note>
+
