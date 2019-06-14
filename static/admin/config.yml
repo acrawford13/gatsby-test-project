@@ -3,13 +3,11 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "images/uploads"
 collections:
-  - name: "guides-en" # Used in routes, e.g., /admin/collections/blog
-    label: "English Guides" # Used in the UI
-    folder: "src/content/guides/en" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "all-guides"
+    label: "All guides"
+    folder: "src/content/guides"
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: md
-    format: frontmatter
+    create: false
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Language", name: "language", widget: "hidden", default: "en"}
@@ -22,18 +20,42 @@ collections:
           label: "Translations",
           name: "translations",
           widget: "relation",
-          collection: "guide",
+          collections: "all-guides",
           displayField: "title",
           searchField: "title",
           valueField: "title",
+          required: false,
+        }
+  - name: "guides-en" # Used in routes, e.g., /admin/collections/blog
+    label: "English Guides" # Used in the UI
+    folder: "src/content/guides" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    filter: {field: "language", value: "en"}
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
+      - {label: "Template key", name: "templateKey", widget: "hidden", default: "guides"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "mdx"}
+      - {
+          label: "Translations",
+          name: "translations",
+          widget: "relation",
+          collections: "all-guides",
+          displayField: "title",
+          searchField: "title",
+          valueField: "title",
+          required: false,
         }
   - name: "guides-pt" # Used in routes, e.g., /admin/collections/blog
     label: "Portuguese Guides" # Used in the UI
-    folder: "src/content/guides/pt" # The path to the folder where the documents are stored
+    folder: "src/content/guides" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: md
-    format: frontmatter
+    filter: {field: "language", value: "pt"}
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Language", name: "language", widget: "hidden", default: "pt"}
@@ -46,8 +68,9 @@ collections:
           label: "Translations",
           name: "translations",
           widget: "relation",
-          collection: "guide",
+          collections: "all-guides",
           displayField: "title",
           searchField: "title",
           valueField: "title",
+          required: false,
         }
