@@ -7,11 +7,13 @@
 $t500: #2accdd;
 $t700: #198D9B;
 $n200: #EAEBED;
+$n300: #cfd0d5;
 $n500: #868A96;
 $n800: #3D3F46;
 $cn100: #f7f8fc;
 $b100: #E9F4FF;
 $white: #ffffff;
+$y100: #fffadd;
 
 $primary:$t500;
 $text-color: $n800;
@@ -134,7 +136,9 @@ html {
     .content-wrapper {
       overflow-y: auto;
       flex-grow: 1;
-      padding: 6rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1.6rem 6rem 6rem;
   
       .content {
         border-radius: 0.4rem;
@@ -142,6 +146,7 @@ html {
         border: 1px solid $n200;
         background-color: $white;
         padding: 5.5rem;
+        margin-top: 1.6rem;
       }
     }
   }
@@ -155,8 +160,13 @@ html {
   flex-direction: column;
   flex-shrink: 0;
 
-  &__content {
+  &__header {
     padding: 3.2rem 4rem;
+  }
+
+  &__content {
+    padding: 0 4rem;
+    overflow-y: auto;
   }
 
   &__logo {
@@ -168,21 +178,44 @@ html {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      border-bottom: 1px solid $n200;
+      margin-bottom: map-get($spacing, xxl);
       li {
         a {
+          border-bottom: 1px solid $n200;
           text-decoration: none;
           color: $n800;
           padding: map-get($spacing, m) 0;
           display: block;
-          border-bottom: 1px solid $n200;
           @include heading(s);
+        }
+
+        &:last-child a {
+          border-bottom: none;
+        }
+
+        li {
+          border-bottom: none;
+          a {
+            border-bottom: none;
+            @include text(l);
+            padding: map-get($spacing, s) 0;
+            padding-left: map-get($spacing, m);
+          }
+
+          li {
+            a {
+              @include text(m);
+              padding: map-get($spacing, xs) 0;
+              padding-left: map-get($spacing, xxl);
+            }
+          }
         }
       }
     }
   }
 
   .sidebar-heading {
-    margin-top: 4rem;
     margin-bottom: 6rem;
 
     &__title {
@@ -288,8 +321,27 @@ html {
   display: flex;
   flex-direction: column;
 
+  p {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
   &--collapsed {
     max-height: 200px;
+  }
+
+  &--collapsible#{&}--collapsed .panel__content {
+    position: relative;
+    &::after {
+      content: '';
+      background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+      width: 100%;
+      height: 2.4rem;
+      display: inline-block;
+      position: absolute;
+      background-color: transparent;
+      bottom: 0;
+    }
   }
 
   &__heading {
@@ -301,12 +353,21 @@ html {
 
   &__content {
     overflow: hidden;
+    margin-bottom: map-get($spacing, m);
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: -1.2rem;
+    margin-top: 2.4rem;
   }
 
   &__toggle {
@@ -314,6 +375,43 @@ html {
     cursor: pointer;
     font-weight: 500;
     display: block;
-    margin-top: map-get($spacing, m);
+    // margin-top: map-get($spacing, m);
+
+    &--read-more {
+      position: relative;
+    }
+  }
+}
+
+.note {
+  background-color: $y100;
+  padding: map-get($spacing, l);
+  @include text(l);
+  margin: map-get($spacing, xxl) 0;
+}
+
+.language-picker {
+  list-style-type: none;
+  margin: 0;
+  margin-left: -(map-get($spacing, xs));
+  margin-right: -(map-get($spacing, xs));
+  padding: 0;
+  display: flex;
+  align-self: flex-end;
+  &__option {
+    @include text(l);
+    font-weight: 300;
+    letter-spacing: 0.02rem;
+    padding: 0 map-get($spacing, xs);
+    a {
+      text-decoration: none;
+      color: $n800;
+    }
+    &:nth-child(n+2) {
+      border-left: 1px solid $n300;
+    }
+    &--selected {
+      font-weight: 500;
+    }
   }
 }

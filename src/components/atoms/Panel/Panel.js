@@ -13,16 +13,16 @@ const Panel = ({ heading, children }) => {
       const isContentOverflowing = measuredRef.current.offsetHeight < measuredRef.current.scrollHeight;
       setIsCollapsible(isContentOverflowing);
     }
-  }, [children, windowSize.width]);
+  }, [children, windowSize]);
 
   return (
-    <div className={`panel ${isCollapsed && 'panel--collapsed'}`}>
-      <h3 className="panel__heading">{heading}</h3>
+    <div className={`panel ${isCollapsed && 'panel--collapsed'} ${isCollapsible && 'panel--collapsible'}`}>
+      {heading && <h3 className="panel__heading">{heading}</h3>}
       <div className="panel__content" ref={measuredRef}>
         {children}
       </div>
       {isCollapsible && isCollapsed && (
-        <span className="panel__toggle" onClick={() => setIsCollapsed(false)}>
+        <span className="panel__toggle panel__toggle--read-more" onClick={() => setIsCollapsed(false)}>
           {'Read more'}
         </span>
       )}

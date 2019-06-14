@@ -1,8 +1,11 @@
+const languages = require('./src/data/languages');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    languages,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/content`,
+        name: 'content',
       },
     },
     `gatsby-plugin-sass`,
@@ -33,7 +36,8 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        plugins: [`gatsby-remark-autolink-headers`],
+        rehypePlugins: [require('rehype-autolink-headings')],
+        remarkPlugins: [require('remark-abbr'), require('remark-heading-id')],
         // TODO: add names of specific components to allow in gatsby-remark-component
       },
     },
@@ -62,4 +66,8 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
+  mapping: {
+    'Mdx.frontmatter.translationen': 'Mdx.frontmatter.title',
+    'Mdx.frontmatter.translationpt': 'Mdx.frontmatter.title',
+  },
 };

@@ -23,7 +23,13 @@ class Guides extends React.Component {
   render() {
     const { mdx: post } = this.props.data;
     return (
-      <Layout data={this.props.data}>
+      <Layout
+        data={this.props.data}
+        translations={[
+          { langKey: 'en', language: 'English', selected: true, ...post.frontmatter.translationen },
+          { langKey: 'pt', language: 'Portuguese', selected: false, ...post.frontmatter.translationpt },
+        ].filter(val => val.id)}
+      >
         <GuidesTemplate
           title={post.frontmatter.title}
           subtitle={post.frontmatter.subtitle}
@@ -45,6 +51,18 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        translationen {
+          id
+          fields {
+            slug
+          }
+        }
+        translationpt {
+          id
+          fields {
+            slug
+          }
+        }
       }
       headings {
         value
