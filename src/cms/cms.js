@@ -1,5 +1,4 @@
 import CMS from 'netlify-cms-app';
-import { List, fromJS } from 'immutable';
 
 import GuidesPreview from './preview-templates/GuidesPreview.js';
 import React, { Component } from 'react';
@@ -7,7 +6,6 @@ import Panel, { PanelWrapper } from '../components/atoms/Panel/Panel';
 import Note from '../components/atoms/Note/Note';
 import Tooltip from '../components/atoms/Tooltip/Tooltip';
 import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
-import { StyleSheetManager } from 'styled-components';
 
 class MDXWidget extends Component {
   render() {

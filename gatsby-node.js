@@ -32,7 +32,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       const id = edge.node.id;
       createPage({
-        path: edge.node.fields.slug.split('.')[0],
+        path: edge.node.fields.slug,
         component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
         // additional data can be passed via context
         context: {
@@ -44,14 +44,18 @@ exports.createPages = ({ actions, graphql }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  console.log('node:', node.frontmatter);
   const { createNodeField } = actions;
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
-      value: value,
+      value: value.split('.')[0],
+    });
+    createNodeField({
+      name: `language`,
+      node,
+      value: value.split('.')[1].replace('/', ''),
     });
   }
 };

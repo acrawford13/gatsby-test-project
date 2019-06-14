@@ -2,24 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-const LanguagePicker = ({ translations, langKey }) => {
-  console.log('translations:', translations);
-  return (
-    <ul className="language-picker">
-      <li key={langKey} className="language-picker__option language-picker__option--selected">
-        <Link>English</Link>
-      </li>
-      {translations.map(option => (
-        <li
-          key={option.langKey}
-          className={`language-picker__option${option.selected ? ' language-picker__option--selected' : ''}`}
-        >
-          <Link to={option.fields.slug}>{option.language}</Link>
-        </li>
-      ))}
-    </ul>
-  );
+const languages = {
+  en: 'English',
+  pt: 'Portuguese',
 };
+
+const LanguagePicker = ({ translations }) => (
+  <ul className="language-picker">
+    {Object.keys(languages).map(langKey => {
+      if (!translations[langKey]) return;
+      if (translations[langKey].selected) {
+        return (
+          <li key={langKey} className="language-picker__option language-picker__option--selected">
+            {languages[langKey]}
+          </li>
+        );
+      }
+      return (
+        <li key={langKey} className="language-picker__option">
+          <Link to={translations[langKey].fields.slug}>{languages[langKey]}</Link>
+        </li>
+      );
+    })}
+  </ul>
+);
 
 LanguagePicker.propTypes = {
   options: PropTypes.arrayOf(

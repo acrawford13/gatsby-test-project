@@ -25,10 +25,12 @@ class Guides extends React.Component {
     return (
       <Layout
         data={this.props.data}
-        translations={[
-          { langKey: 'en', language: 'English', selected: true, ...post.frontmatter.translationen },
-          { langKey: 'pt', language: 'Portuguese', selected: false, ...post.frontmatter.translationpt },
-        ].filter(val => val.id)}
+        language={post.fields.language}
+        translations={{
+          en: post.frontmatter.translationen,
+          pt: post.frontmatter.translationpt,
+          [post.fields.language]: { selected: true },
+        }}
       >
         <GuidesTemplate
           title={post.frontmatter.title}
@@ -47,6 +49,9 @@ export const pageQuery = graphql`
       id
       code {
         body
+      }
+      fields {
+        language
       }
       frontmatter {
         title

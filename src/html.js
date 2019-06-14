@@ -1,9 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-
 import PropTypes from 'prop-types';
-import GlobalStyle from './components/theme/globalStyle';
-import * as theme from './components/theme/theme';
 
 export default function HTML(props) {
   return (
