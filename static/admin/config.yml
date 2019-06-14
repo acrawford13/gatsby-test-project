@@ -5,7 +5,7 @@ media_folder: "images/uploads"
 collections:
   - name: "guides-en" # Used in routes, e.g., /admin/collections/blog
     label: "English Guides" # Used in the UI
-    folder: "src/pages/guides/en" # The path to the folder where the documents are stored
+    folder: "src/content/guides/en" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: md
@@ -29,7 +29,7 @@ collections:
         }
   - name: "guides-pt" # Used in routes, e.g., /admin/collections/blog
     label: "Portuguese Guides" # Used in the UI
-    folder: "src/pages/guides/pt" # The path to the folder where the documents are stored
+    folder: "src/content/guides/pt" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: md

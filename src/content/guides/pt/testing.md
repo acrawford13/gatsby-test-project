@@ -9,3 +9,8 @@ translations:
   - How to get the Alojamento Local Permit in Porto
 ---
 asdasd
+<PanelWrapper>
+<Panel heading="Asdasdasd">
+Estabelecimentos de Alojamento Local (Short Term Rental) are those providing temporary accommodation services - namely to tourists, in exchange for payment - provided they do not qualify as touristic developments. Estabelecimentos de Alojamento Local (Short Term Rental) are those providing temporary accommodation services - namely to tourists, in exchange for payment - provided they do not qualify as touristic developments.
+</Panel>
+</PanelWrapper>

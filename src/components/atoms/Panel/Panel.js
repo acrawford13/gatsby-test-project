@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import useWindowSize from '../../../hooks/useWindowSize';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 
 const Panel = ({ heading, children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -16,19 +17,19 @@ const Panel = ({ heading, children }) => {
   }, [children, windowSize]);
 
   return (
-    <div className={`panel ${isCollapsed && 'panel--collapsed'} ${isCollapsible && 'panel--collapsible'}`}>
+    <div className={`panel ${isCollapsed ? 'panel--collapsed' : ''} ${isCollapsible ? 'panel--collapsible' : ''}`}>
       {heading && <h3 className="panel__heading">{heading}</h3>}
       <div className="panel__content" ref={measuredRef}>
         {children}
       </div>
       {isCollapsible && isCollapsed && (
         <span className="panel__toggle panel__toggle--read-more" onClick={() => setIsCollapsed(false)}>
-          {'Read more'}
+          <FormattedMessage id="app.readMore" />
         </span>
       )}
       {isCollapsible && !isCollapsed && (
         <span className="panel__toggle" onClick={() => setIsCollapsed(true)}>
-          {'Read less'}
+          <FormattedMessage id="app.readLess" />
         </span>
       )}
     </div>

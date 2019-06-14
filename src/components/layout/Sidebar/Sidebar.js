@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../../images/GR_Logo2x.png';
 import SidebarHeading from './components/SidebarHeading';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 
 const Sidebar = ({ post, isOpen, setIsOpen }) => (
   <>

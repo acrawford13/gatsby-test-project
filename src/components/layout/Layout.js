@@ -1,23 +1,37 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Sidebar from './Sidebar/Sidebar';
-import '../../index.scss';
 import { MDXProvider } from '@mdx-js/react';
-import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
-import Note from '../atoms/Note/Note';
-import Tooltip from '../atoms/Tooltip/Tooltip';
-import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 import GHSlugger from 'github-slugger';
 import { stringifyChildren } from '../../utils/slugs';
+
+import '../../index.scss';
 import menuToggle from '../../images/menu-toggle.svg';
+
+import Sidebar from './Sidebar/Sidebar';
 import SEO from '../../components/seo';
+import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
+import Note from '../atoms/Note/Note';
+import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
+
+import { IntlProvider, addLocaleData } from 'react-intl';
+import locale_en from 'react-intl/locale-data/en';
+import locale_pt from 'react-intl/locale-data/pt';
+
+import messages_pt from '../../translations/pt.json';
+import messages_en from '../../translations/en.json';
+
+addLocaleData([...locale_en, ...locale_pt]);
+
+const messages = {
+  pt: messages_pt,
+  en: messages_en,
+};
 
 const slugger = new GHSlugger();
 const sluggerComps = {
   Panel: Panel,
   PanelWrapper: PanelWrapper,
   Note: Note,
-  Tooltip: Tooltip,
   h1: function customH1({ children }) {
     const kids = stringifyChildren(children);
     return <h1 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h1>;
@@ -32,27 +46,29 @@ const sluggerComps = {
   code: 'div',
 };
 
-const Layout = ({ children, post, translations, language }) => {
+const Layout = ({ children, post, translations }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <>
-      <SEO lang={post.frontmatter.language} />
-      <div className="layout layout--sidebar">
-        <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} post={post} />
-        <main className="content-wrapper">
-          <div className="top-bar">
-            <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
-              <img src={menuToggle} />
+    <IntlProvider locale={post.frontmatter.language} messages={messages[post.frontmatter.language]}>
+      <>
+        <SEO lang={post.frontmatter.language} />
+        <div className="layout layout--sidebar">
+          <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} post={post} />
+          <main className="content-wrapper">
+            <div className="top-bar">
+              <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
+                <img src={menuToggle} />
+              </div>
+              <LanguagePicker currentLanguage={post.frontmatter.language} translations={translations} />
             </div>
-            <LanguagePicker currentLanguage={post.frontmatter.language} translations={translations} />
-          </div>
-          <MDXProvider components={sluggerComps}>
-            <div className="content">{children}</div>
-          </MDXProvider>
-        </main>
-      </div>
-    </>
+            <MDXProvider components={sluggerComps}>
+              <div className="content">{children}</div>
+            </MDXProvider>
+          </main>
+        </div>
+      </>
+    </IntlProvider>
   );
 };
 
