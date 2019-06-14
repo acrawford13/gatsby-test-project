@@ -16,10 +16,6 @@ export const GuidesTemplate = ({ title, subtitle, content, contentComponent }) =
 };
 
 class Guides extends React.Component {
-  shouldComponentUpdate() {
-    return false;
-  }
-
   render() {
     const { mdx: post } = this.props.data;
     return (

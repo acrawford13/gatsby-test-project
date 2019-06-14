@@ -1,8 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
-
-import Heading from '../../atoms/typography/Heading/Heading';
-import Subheading from '../../atoms/typography/Subheading/Subheading';
 
 const PageHeading = ({ title, subtitle }) => (
   <div className="page-heading">

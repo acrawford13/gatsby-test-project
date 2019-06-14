@@ -131,14 +131,36 @@ html {
   box-sizing: border-box;
 }
 
+.message-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 100%;
+  &__panel {
+    width: 50%;
+    box-shadow: $box-shadow;
+    background-color: $white;
+    border-radius: 0.4rem;
+    padding: map-get($spacing, m);
+    text-align: center;
+    max-width: 50rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 // layout
 .layout {
   position: relative;
   background-color: $cn100;
+  height: 100%;
 
   &--sidebar {
     display: flex;
-    height: 100%;
   
     .content-wrapper {
       overflow-y: auto;
