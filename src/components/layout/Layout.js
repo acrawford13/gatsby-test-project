@@ -9,9 +9,8 @@ import Tooltip from '../atoms/Tooltip/Tooltip';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 import GHSlugger from 'github-slugger';
 import { stringifyChildren } from '../../utils/slugs';
-import { StaticQuery, graphql } from 'gatsby';
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import menuToggle from '../../images/menu-toggle.svg';
+import SEO from '../../components/seo';
 
 const slugger = new GHSlugger();
 const sluggerComps = {
@@ -33,24 +32,27 @@ const sluggerComps = {
   code: 'div',
 };
 
-const Layout = ({ children, data: pageData, translations, language }) => {
+const Layout = ({ children, post, translations, language }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="layout layout--sidebar">
-      <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} data={pageData} />
-      <main className="content-wrapper">
-        <div className="top-bar">
-          <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
-            <img src={menuToggle} />
+    <>
+      <SEO lang={post.frontmatter.language} />
+      <div className="layout layout--sidebar">
+        <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} post={post} />
+        <main className="content-wrapper">
+          <div className="top-bar">
+            <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
+              <img src={menuToggle} />
+            </div>
+            <LanguagePicker currentLanguage={post.frontmatter.language} translations={translations} />
           </div>
-          <LanguagePicker langKey={language} translations={translations} />
-        </div>
-        <MDXProvider components={sluggerComps}>
-          <div className="content">{children}</div>
-        </MDXProvider>
-      </main>
-    </div>
+          <MDXProvider components={sluggerComps}>
+            <div className="content">{children}</div>
+          </MDXProvider>
+        </main>
+      </div>
+    </>
   );
 };
 

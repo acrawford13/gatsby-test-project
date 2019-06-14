@@ -50,12 +50,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: value.split('.')[0],
-    });
-    createNodeField({
-      name: `language`,
-      node,
-      value: value.split('.')[1].replace('/', ''),
+      value,
     });
   }
 };

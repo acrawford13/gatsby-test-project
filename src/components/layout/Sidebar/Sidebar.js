@@ -2,18 +2,18 @@ import React from 'react';
 import logo from '../../../images/GR_Logo2x.png';
 import SidebarHeading from './components/SidebarHeading';
 
-const Sidebar = ({ data, isOpen, setIsOpen }) => (
+const Sidebar = ({ post, isOpen, setIsOpen }) => (
   <>
     <div className={`sidebar ${isOpen ? 'sidebar--open' : ''}`}>
       <div className="sidebar__header">
         <img className="sidebar__logo" src={logo} />
       </div>
       <div className="sidebar__content">
-        <SidebarHeading title={data.mdx.frontmatter.title} subtitle={data.mdx.frontmatter.subtitle} />
+        <SidebarHeading title={post.frontmatter.title} subtitle={post.frontmatter.subtitle} />
         <div className="sidebar__nav">
           <ul>
-            {data.mdx.tableOfContents.items &&
-              data.mdx.tableOfContents.items.map(h1 => (
+            {post.tableOfContents.items &&
+              post.tableOfContents.items.map(h1 => (
                 <li key={h1.url}>
                   <a onClick={() => setIsOpen(false)} href={h1.url}>
                     {h1.title}

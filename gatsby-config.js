@@ -25,24 +25,14 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-component`],
-    //     // TODO: add names of specific components to allow in gatsby-remark-component
-    //   },
-    // },
     {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        rehypePlugins: [require('rehype-autolink-headings')],
-        remarkPlugins: [require('remark-abbr'), require('remark-heading-id')],
-        // TODO: add names of specific components to allow in gatsby-remark-component
+        remarkPlugins: [require('remark-abbr')],
       },
     },
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -67,7 +57,6 @@ module.exports = {
     `gatsby-plugin-netlify`,
   ],
   mapping: {
-    'Mdx.frontmatter.translationen': 'Mdx.frontmatter.title',
-    'Mdx.frontmatter.translationpt': 'Mdx.frontmatter.title',
+    'Mdx.frontmatter.translations': 'Mdx.frontmatter.title',
   },
 };

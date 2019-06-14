@@ -3,48 +3,50 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 media_folder: "images/uploads"
 collections:
-  - name: "guide-en" # Used in routes, e.g., /admin/collections/blog
+  - name: "guides-en" # Used in routes, e.g., /admin/collections/blog
     label: "English Guides" # Used in the UI
-    folder: "src/pages/guides" # The path to the folder where the documents are stored
+    folder: "src/pages/guides/en" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: en.md
+    extension: md
     format: frontmatter
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - {label: "Template key", name: "templateKey", widget: "hidden", default: "guides"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "mdx"}
       - {
-          label: "Translation (Portuguese)",
-          name: "translationpt",
+          label: "Translations",
+          name: "translations",
           widget: "relation",
-          collection: "guide-pt",
+          collection: "guide",
           displayField: "title",
           searchField: "title",
           valueField: "title",
         }
-  - name: "guide-pt" # Used in routes, e.g., /admin/collections/blog
+  - name: "guides-pt" # Used in routes, e.g., /admin/collections/blog
     label: "Portuguese Guides" # Used in the UI
-    folder: "src/pages/guides" # The path to the folder where the documents are stored
+    folder: "src/pages/guides/pt" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: pt.md
+    extension: md
     format: frontmatter
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Language", name: "language", widget: "hidden", default: "pt"}
       - {label: "Template key", name: "templateKey", widget: "hidden", default: "guides"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "mdx"}
       - {
-          label: "Translation (English)",
-          name: "translationen",
+          label: "Translations",
+          name: "translations",
           widget: "relation",
-          collection: "guide-en",
+          collection: "guide",
           displayField: "title",
           searchField: "title",
           valueField: "title",
