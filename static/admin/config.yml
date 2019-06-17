@@ -11,7 +11,6 @@ collections:
     create: false
     fields:
       - {label: "Language", name: "language", widget: "select", options: [{label: "English", value: "en"}, {label: "Portuguese", value: "pt"}]}
-      - {label: "Title", name: "title", widget: "string"}
       - {label: "Template key", name: "templateKey", widget: "hidden", default: "guides"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
