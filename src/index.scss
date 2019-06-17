@@ -224,6 +224,42 @@ html {
     max-width: 100%;
   }
 
+  &__list-item {
+    a {
+      color: $n800;
+      display: block;
+      text-decoration: none;
+    }
+
+    &--1 {
+      a {
+        border-bottom: 1px solid $n200;
+        padding: map-get($spacing, m) 0;
+        @include heading(s);
+      }
+
+      &:last-child a:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &--2 {
+      a {
+        @include text(l);
+        padding: map-get($spacing, s) 0;
+        padding-left: map-get($spacing, m);
+      }
+    }
+
+    &--3 {
+      a {
+        @include text(m);
+        padding: map-get($spacing, xs) 0;
+        padding-left: map-get($spacing, xxl);
+      }
+    }
+  }
+
   &__nav {
     ul {
       list-style-type: none;
@@ -231,38 +267,6 @@ html {
       padding: 0;
       border-bottom: 1px solid $n200;
       margin-bottom: map-get($spacing, xxl);
-      li {
-        a {
-          border-bottom: 1px solid $n200;
-          text-decoration: none;
-          color: $n800;
-          padding: map-get($spacing, m) 0;
-          display: block;
-          @include heading(s);
-        }
-
-        &:last-child a:last-child {
-          border-bottom: none;
-        }
-
-        li {
-          border-bottom: none;
-          a {
-            border-bottom: none;
-            @include text(l);
-            padding: map-get($spacing, s) 0;
-            padding-left: map-get($spacing, m);
-          }
-
-          li {
-            a {
-              @include text(m);
-              padding: map-get($spacing, xs) 0;
-              padding-left: map-get($spacing, xxl);
-            }
-          }
-        }
-      }
     }
   }
 

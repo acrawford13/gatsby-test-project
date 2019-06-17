@@ -15,27 +15,31 @@ const Sidebar = ({ post, isOpen, setIsOpen }) => (
           <ul>
             {post.tableOfContents.items &&
               post.tableOfContents.items.map(h1 => (
-                <li key={h1.url}>
-                  <a onClick={() => setIsOpen(false)} href={h1.url}>
-                    {h1.title}
-                  </a>
+                <>
+                  <li className="sidebar__list-item sidebar__list-item--1" key={h1.url}>
+                    <a onClick={() => setIsOpen(false)} href={h1.url}>
+                      {h1.title}
+                    </a>
+                  </li>
                   {h1.items &&
                     h1.items.map(h2 => (
-                      <li key={h2.url}>
-                        <a onClick={() => setIsOpen(false)} href={h2.url}>
-                          {h2.title}
-                        </a>
+                      <>
+                        <li className="sidebar__list-item sidebar__list-item--2" key={h2.url}>
+                          <a onClick={() => setIsOpen(false)} href={h2.url}>
+                            {h2.title}
+                          </a>
+                        </li>
                         {h2.items &&
                           h2.items.map(h3 => (
-                            <li key={h3.url}>
+                            <li className="sidebar__list-item sidebar__list-item--3" key={h3.url}>
                               <a onClick={() => setIsOpen(false)} href={h3.url}>
                                 {h3.title}
                               </a>
                             </li>
                           ))}
-                      </li>
+                      </>
                     ))}
-                </li>
+                </>
               ))}
           </ul>
         </div>
