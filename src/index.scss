@@ -396,7 +396,8 @@ html {
     margin-top: 5.5rem;
   }
 
-  h2 {
+  h2,
+  h3 {
     @include text(l);
     font-weight: 500;
     margin-top: 2.4rem;
