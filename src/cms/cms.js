@@ -33,3 +33,4 @@ const PreviewWindow = props => {
 CMS.registerWidget('mdx', MDXWidget, PreviewWindow);
 CMS.registerPreviewTemplate('guides-en', GuidesPreview);
 CMS.registerPreviewTemplate('guides-pt', GuidesPreview);
+CMS.registerPreviewTemplate('all-guides', GuidesPreview);
