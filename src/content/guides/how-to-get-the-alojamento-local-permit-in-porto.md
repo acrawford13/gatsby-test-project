@@ -31,4 +31,4 @@ It will open in a new window with a form where you should fill the remaining inf
 
 <Note>Note: When placing the check ✓ in the Transmissões Intracomunitárias, corresponding to the VAT Information Exchange System (VIES), - when you create your property profile in the booking platforms, you must then inform them that you activated the VIES and future invoices with their commission must not include VAT.</Note>
 
-\*\[Estabelecimentos de Alojamento Local]: Short term rentals
+*[Estabelecimentos de Alojamento Local]: Short term rentals
