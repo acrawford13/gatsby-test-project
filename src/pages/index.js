@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import '../index.scss';
 
 const IndexPage = ({ data }) => (
   <div style={{ padding: '3rem' }}>
