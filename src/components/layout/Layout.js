@@ -38,10 +38,12 @@ const sluggerComps = {
     return <h1 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h1>;
   },
   h2: function customH2({ children }) {
-    return <h2 id={slugger.slug(children)}>{children}</h2>;
+    const kids = stringifyChildren(children);
+    return <h2 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h2>;
   },
   h3: function customH3({ children }) {
-    return <h3 id={slugger.slug(children)}>{children}</h3>;
+    const kids = stringifyChildren(children);
+    return <h3 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h3>;
   },
   pre: 'div',
   code: 'div',
