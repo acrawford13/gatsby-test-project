@@ -1,18 +1,12 @@
 import CMS from 'netlify-cms-app';
 
 import GuidesPreview from './preview-templates/GuidesPreview.js';
-import React, { Component } from 'react';
+import React from 'react';
 import Panel, { PanelWrapper } from '../components/atoms/Panel/Panel';
 import Note from '../components/atoms/Note/Note';
 import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
 import { IntlProvider } from 'react-intl';
 import messages_en from '../translations/en.json';
-
-class MDXWidget extends Component {
-  render() {
-    return <MdxControl {...this.props} />;
-  }
-}
 
 const PreviewWindow = props => {
   const mdxProps = {
@@ -60,7 +54,7 @@ CMS.registerEditorComponent({
   },
 });
 
-CMS.registerWidget('mdx', MDXWidget, PreviewWindow);
+CMS.registerWidget('mdx', MdxControl, PreviewWindow);
 CMS.registerPreviewTemplate('guides-en', GuidesPreview);
 CMS.registerPreviewTemplate('guides-pt', GuidesPreview);
 CMS.registerPreviewTemplate('all-guides', GuidesPreview);
