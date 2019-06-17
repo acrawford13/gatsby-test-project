@@ -390,14 +390,14 @@ html {
 .inner-content {
   @include text(l);
 
-  h1 {
+  > h1 {
     @include heading(m);
     font-weight: 500;
     margin-top: 5.5rem;
   }
 
-  h2,
-  h3 {
+  > h2,
+  > h3 {
     @include text(l);
     font-weight: 500;
     margin-top: 2.4rem;
