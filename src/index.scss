@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,500i&display=swap');
+
 @mixin style-from-map($map) {
   @each $key, $value in $map {
     #{$key}: $value;
