@@ -1,13 +1,13 @@
 ---
 language: en
-title: How to get the Alojamento Local Permit in Porto
 templateKey: guides
+title: How to get the Alojamento Local Permit in Porto
 subtitle: The essential guide
 date: 2019-06-11T18:06:03.153Z
 translations:
   - Placeholder
 ---
-GuestReady has prepared an Essential Guide with the three steps required to obtain your  Licença de Alojamento Local (Short Term Rental Permit). The first is to **communicate to the Tax Authorities your new business venture** (Autoridade Tributária e Aduaneira) , and then **register the Alojamento Local (AL)** at the **Entrepreneur's Desk** (Balcão do Empreendedor) that can take up to 10 days (20 days in the case of hostels) to be approved. After this period, you can **officially start receiving reservations,** however it is your responsibility to **ensure that you comply with certain general and safety rules** (such as having an extinguisher, fire blanket, etc.). 
+GuestReady has prepared an Essential Guide with the three steps required to obtain your  Licença de Alojamento Local (Short Term Rental Permit). The first is to **communicate to the Tax Authorities your new business venture** (Autoridade Tributária e Aduaneira) , and then **register the Alojamento Local (AL)** at the **Entrepreneur's Desk** (Balcão do Empreendedor) that can take up to 10 days (20 days in the case of hostels)[^1] to be approved. After this period, you can **officially start receiving reservations,** however it is your responsibility to **ensure that you comply with certain general and safety rules** (such as having an extinguisher, fire blanket, etc.). 
 
 After that, please keep in mind that you are still bound to some regular obligations such as the collection, form submission and payment of the **Taxa Municipal Turística** (tourist taxes), communication to the **Serviço de Estrangeiros e Fronteiras** (borders and foreigners agency), tax obligations and submit the following documents: **modelo 21-RFI** and **modelo 30**
 
@@ -70,3 +70,5 @@ It will open in a new window with a form where you should fill the remaining inf
 *[Estabelecimentos de Alojamento Local]: Short term rentals
 
 *[Taxa Municipal Turística]: tourist taxes
+
+[^1]: From [GuestReady](www.guestready.com)
