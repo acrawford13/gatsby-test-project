@@ -47,8 +47,11 @@ In the ENI regime, the tax of 28% in relation to category F - Property Income) f
 
 If, for example, an owner has a yearly turnover of € 1000 (which represents 100% of their annual income), only € 350 (35%) will be subject to 28% tax (relative to the current tax rate for alojamento local):
 
-€ 1000 (100%) - € 350 (35%) = € 650\
-350 € - 28% = € 98 (tax value you would pay)
+<div style={{textAlign: 'center'}}>
+
+€ 1000 (100%) - € 350 (35%) = € 650<br/>350 € - 28% = € 98 (tax value you would pay)
+
+</div>
 
 ## How to Register in Tax Authority
 
