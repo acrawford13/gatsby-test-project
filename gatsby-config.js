@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/uploads`,
       },
     },
     {
@@ -29,10 +29,12 @@ module.exports = {
         remarkPlugins: [require('remark-abbr')],
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-relative-images',
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
-              sizeByPixelDensity: true,
             },
           },
         ],
