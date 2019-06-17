@@ -30,6 +30,36 @@ const PreviewWindow = props => {
   );
 };
 
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: 'definition',
+  // Visible label
+  label: 'Definition',
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [
+    { name: 'text', label: 'Text', widget: 'string' },
+    { name: 'definition', label: 'Definition', widget: 'string' },
+  ],
+  // Pattern to identify a block as being an instance of this component
+  pattern: /^\*\[(.*?)\]: (.*?)$/,
+  // Function to extract data elements from the regexp match
+  fromBlock: function(match) {
+    return {
+      text: match[1],
+      definition: match[2],
+    };
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: function(obj) {
+    return '*[' + obj.text + ']: ' + obj.definition;
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function(obj) {
+    return '*[' + obj.text + ']: ' + obj.definition;
+  },
+});
+
 CMS.registerWidget('mdx', MDXWidget, PreviewWindow);
 CMS.registerPreviewTemplate('guides-en', GuidesPreview);
 CMS.registerPreviewTemplate('guides-pt', GuidesPreview);
