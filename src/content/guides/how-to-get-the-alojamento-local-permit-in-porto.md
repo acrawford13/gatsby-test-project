@@ -20,3 +20,5 @@ There are several types of establishments in which your Alojamento Local can ope
 <PanelWrapper><Panel heading="Single-family detached home">Alojamento local establishment whose unit of accommodation is constituted by an autonomous building, of a single-family house</Panel><Panel heading="Apartment">Alojamento local establishment whose accommodation unit consists of an autonomous fraction of a building or part of an urban building susceptible of independent use.</Panel></PanelWrapper>
 
 <Note>Note: When placing the check ✓ in the Transmissões Intracomunitárias, corresponding to the VAT Information Exchange System (VIES), - when you create your property profile in the booking platforms, you must then inform them that you activated the VIES and future invoices with their commission must not include VAT.</Note>
+
+\*\[Estabelecimentos de Alojamento Local]: Short term rentals
