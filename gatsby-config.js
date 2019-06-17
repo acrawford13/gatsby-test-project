@@ -27,6 +27,15 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         remarkPlugins: [require('remark-abbr')],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-sharp`,
