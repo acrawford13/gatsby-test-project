@@ -543,3 +543,20 @@ html {
     flex-basis: calc(50% - 2.4rem);
   }
 }
+
+.index-page {
+  padding: 3rem;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        border-bottom: 1px solid $n200;
+        padding: map-get($spacing, m) 0;
+        @include heading(s);
+        display: block;
+      }
+    }
+  }
+}

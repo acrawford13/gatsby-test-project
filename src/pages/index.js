@@ -3,19 +3,18 @@ import { Link, graphql } from 'gatsby';
 import '../index.scss';
 
 const IndexPage = ({ data }) => (
-  <div style={{ padding: '3rem' }}>
-    <div className="sidebar__nav">
-      <ul>
-        {data.allMdx.edges.map(edge => (
-          <li key={edge.node.id}>
-            <Link to={edge.node.fields.slug}>
-              {edge.node.frontmatter.title}{' '}
-              <small style={{ textTransform: 'uppercase', fontSize: '1rem' }}>({edge.node.frontmatter.language})</small>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+  <div className="index-page">
+    <h1>Index</h1>
+    <ul>
+      {data.allMdx.edges.map(edge => (
+        <li key={edge.node.id}>
+          <Link to={edge.node.fields.slug}>
+            {edge.node.frontmatter.title}{' '}
+            <small style={{ textTransform: 'uppercase', fontSize: '1rem' }}>({edge.node.frontmatter.language})</small>
+          </Link>
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
