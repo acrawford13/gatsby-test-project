@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/Layout';
 import PageHeading from '../components/molecules/PageHeading/PageHeading';
@@ -13,6 +14,13 @@ export const GuidesTemplate = ({ title, subtitle, content, contentComponent }) =
       <PageContent content={content} />
     </>
   );
+};
+
+GuidesTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  content: PropTypes.string.isRequired,
+  contentComponent: PropTypes.func,
 };
 
 class Guides extends React.Component {
@@ -30,6 +38,39 @@ class Guides extends React.Component {
     );
   }
 }
+
+Guides.propTypes = {
+  data: PropTypes.shape({
+    mdx: PropTypes.shape({
+      code: PropTypes.shape({
+        body: PropTypes.string.isRequired,
+      }).isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        subtitle: PropTypes.string,
+        translations: PropTypes.arrayOf(
+          PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }).isRequired,
+            frontmatter: PropTypes.shape({
+              language: PropTypes.string.isRequired,
+            }).isRequired,
+          }),
+        ),
+      }),
+      tableOfContents: PropTypes.shape({
+        items: PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+          }),
+        ),
+      }),
+    }),
+  }).isRequired,
+};
 
 export const pageQuery = graphql`
   query GuideById($id: String!) {
@@ -51,10 +92,6 @@ export const pageQuery = graphql`
             language
           }
         }
-      }
-      headings {
-        value
-        depth
       }
       tableOfContents
     }
