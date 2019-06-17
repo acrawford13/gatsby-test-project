@@ -10,7 +10,6 @@ import menuToggle from '../../images/menu-toggle.svg';
 import Sidebar from './Sidebar/Sidebar';
 import SEO from '../../components/seo';
 import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
-import Image from '../image';
 import Note from '../atoms/Note/Note';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 
