@@ -1,7 +1,7 @@
 ---
 language: en
-templateKey: guides
 title: How to get the Alojamento Local Permit in Porto
+templateKey: guides
 subtitle: The essential guide
 date: 2019-06-11T18:06:03.153Z
 translations:
@@ -53,7 +53,7 @@ If, for example, an owner has a yearly turnover of € 1000 (which represents 10
 
 </div>
 
-## How to Register in Tax Authority
+### How to Register in Tax Authority
 
 Follow these steps to open an economic activity with the ENI in the finance portal:
 
