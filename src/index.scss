@@ -241,7 +241,7 @@ html {
           @include heading(s);
         }
 
-        &:last-child a {
+        &:last-child a:last-child {
           border-bottom: none;
         }
 
@@ -376,6 +376,12 @@ html {
     @include heading(m);
     font-weight: 500;
     margin-top: 5.5rem;
+  }
+
+  h2 {
+    @include text(l);
+    font-weight: 500;
+    margin-top: 2.4rem;
   }
 
   blockquote {
