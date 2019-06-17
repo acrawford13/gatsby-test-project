@@ -1,7 +1,7 @@
 ---
 language: en
-title: How to get the Alojamento Local Permit in Porto
 templateKey: guides
+title: How to get the Alojamento Local Permit in Porto
 subtitle: The essential guide
 date: 2019-06-11T18:06:03.153Z
 ---
@@ -17,9 +17,6 @@ Estabelecimentos de Alojamento Local (Short Term Rental) are those providing tem
 
 There are several types of establishments in which your Alojamento Local can operate:
 
-<PanelWrapper><Panel heading="dd">Estabelecimentos de Alojamento Local (Short Term Rental) are those providing temporary accommodation services - namely to tourists, in exchange for payment - provided they do not qualify as touristic developments. Estabelecimentos de Alojamento Local (Short Term Rental) are those providing temporary accommodation services - namely to tourists, in exchange for payment - provided they do not qualify as touristic developments.</Panel></PanelWrapper>
+<PanelWrapper><Panel heading="Single-family detached home">Alojamento local establishment whose unit of accommodation is constituted by an autonomous building, of a single-family house</Panel><Panel heading="Apartment">Alojamento local establishment whose accommodation unit consists of an autonomous fraction of a building or part of an urban building susceptible of independent use.</Panel></PanelWrapper>
 
-<PanelWrapper><Panel heading="asdasd">dddddd</Panel></PanelWrapper>
 <Note>Note: When placing the check ✓ in the Transmissões Intracomunitárias, corresponding to the VAT Information Exchange System (VIES), - when you create your property profile in the booking platforms, you must then inform them that you activated the VIES and future invoices with their commission must not include VAT.</Note>
-
-![adsf](/src/images/uploads/screenshot-from-2019-05-20-23-15-05.png "asdf")
