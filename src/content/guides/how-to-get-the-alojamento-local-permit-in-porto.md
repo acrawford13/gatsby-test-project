@@ -21,6 +21,14 @@ There are several types of establishments in which your Alojamento Local can ope
 
 <PanelWrapper><Panel heading="Single-family detached home">Alojamento local establishment whose unit of accommodation is constituted by an autonomous building, of a single-family house</Panel><Panel heading="Apartment">Alojamento local establishment whose accommodation unit consists of an autonomous fraction of a building or part of an urban building susceptible of independent use.</Panel></PanelWrapper>
 
+It will open in a new window with a form where you should fill the remaining information.  
+
+**In the form of Beginning of the Business Activity, we advise to fill in the following form:**
+
+* Type of Passive Subject as Cat. B - Rendimentos Empresariais ;
+* In the CAE / CIRS Code write 55201 [Alojamento Mobilado para Turistas or 55204 [(Outros locais de Alojamento de Curta Duração
+* In Actividade Exercida enter the Data de início de actividade; and check ✓ where it says Transmissões Intracomunitárias (see image)
+
 <Note>Note: When placing the check ✓ in the Transmissões Intracomunitárias, corresponding to the VAT Information Exchange System (VIES), - when you create your property profile in the booking platforms, you must then inform them that you activated the VIES and future invoices with their commission must not include VAT.</Note>
 
-*[Estabelecimentos de Alojamento Local]: Short term rentals
+\*\[Estabelecimentos de Alojamento Local]: Short term rentals
