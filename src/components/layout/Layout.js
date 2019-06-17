@@ -52,7 +52,7 @@ const Layout = ({ children, post, translations }) => {
   return (
     <IntlProvider locale={post.frontmatter.language} messages={messages[post.frontmatter.language]}>
       <>
-        <SEO lang={post.frontmatter.language} />
+        <SEO title={post.frontmatter.title} lang={post.frontmatter.language} />
         <div className="layout layout--sidebar">
           <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} post={post} />
           <main className="content-wrapper">

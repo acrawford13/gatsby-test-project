@@ -31,7 +31,7 @@ LanguagePicker.propTypes = {
         slug: PropTypes.string.isRequired,
       }).isRequired,
     }),
-  ).isRequired,
+  ),
   currentLanguage: PropTypes.string.isRequired,
 };
 
