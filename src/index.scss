@@ -370,6 +370,8 @@ html {
 }
 
 .inner-content {
+  @include text(l);
+
   h1 {
     @include heading(m);
     font-weight: 500;
