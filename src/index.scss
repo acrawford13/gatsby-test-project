@@ -118,6 +118,7 @@ p {
 abbr {
   text-decoration: underline;
   font-style: italic;
+  cursor: help;
 }
 
 a {
@@ -454,7 +455,6 @@ html {
   background: $white;
   border-radius: 0.4rem;
   @include text(m);
-  margin: 1.2rem;
   flex-shrink: 1;
   flex-basis: 100%;
   display: flex;
@@ -501,6 +501,10 @@ html {
     font-weight: 500;
     margin: map-get($spacing, m);
     margin-top: 0;
+
+    &--primary {
+      color: $primary;
+    }
   }
 
   &__image {
@@ -529,6 +533,9 @@ html {
     flex-wrap: wrap;
     margin: 2.4rem -1.2rem;
     align-items: flex-start;
+    .panel {
+      margin: 1.2rem;
+    }
   }
 
   &__toggle {
@@ -537,7 +544,6 @@ html {
     font-weight: 500;
     display: block;
     margin: 0 map-get($spacing, m);
-    // margin-top: map-get($spacing, m);
 
     &--read-more {
       position: relative;

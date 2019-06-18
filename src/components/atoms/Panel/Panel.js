@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Panel = ({ heading, children, headingImageUrl }) => {
+const Panel = ({ heading, children, headingImageUrl, withHeadingColor }) => {
   let imageUrl;
   if (headingImageUrl) {
     const allImages = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ const Panel = ({ heading, children, headingImageUrl }) => {
   return (
     <div className="panel">
       {imageUrl && <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />}
-      {heading && <h3 className="panel__heading">{heading}</h3>}
+      {heading && <h3 className={`panel__heading ${withHeadingColor ? 'panel__heading--primary' : ''}`}>{heading}</h3>}
       <div className="panel__content">{children}</div>
     </div>
   );
@@ -37,6 +37,7 @@ Panel.propTypes = {
   headingImageUrl: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   heading: PropTypes.string,
+  withHeadingColor: PropTypes.bool,
 };
 
 export const PanelWrapper = ({ children }) => <div className="panel__wrapper">{children}</div>;
