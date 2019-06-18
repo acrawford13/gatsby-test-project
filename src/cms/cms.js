@@ -58,7 +58,7 @@ CMS.registerEditorComponent({
   },
 });
 
-CMS.registerWidget('mdx', MdxControl, PreviewWindow);
+CMS.registerWidget('mdx', 'text', PreviewWindow);
 CMS.registerPreviewTemplate('guides-en', GuidesPreview);
 CMS.registerPreviewTemplate('guides-pt', GuidesPreview);
 CMS.registerPreviewTemplate('all-guides', GuidesPreview);
