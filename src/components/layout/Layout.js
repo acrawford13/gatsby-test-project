@@ -10,6 +10,8 @@ import menuToggle from '../../images/menu-toggle.svg';
 import Sidebar from './Sidebar/Sidebar';
 import SEO from '../../components/seo';
 import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
+import Column, { ColumnWrapper } from '../atoms/Column/Column';
+import CollapsiblePanel from '../atoms/CollapsiblePanel/CollapsiblePanel';
 import Note from '../atoms/Note/Note';
 import Highlight from '../atoms/Highlight/Highlight';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
@@ -30,8 +32,11 @@ const messages = {
 
 const slugger = new GHSlugger();
 const sluggerComps = {
-  Panel: Panel,
-  PanelWrapper: PanelWrapper,
+  Panel,
+  PanelWrapper,
+  CollapsiblePanel,
+  Column,
+  ColumnWrapper,
   Highlight,
   Note: Note,
   h1: function customH1({ children }) {

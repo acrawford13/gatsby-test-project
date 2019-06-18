@@ -439,13 +439,14 @@ html {
   border: 1px solid $n200;
   background: $white;
   border-radius: 0.4rem;
-  padding: map-get($spacing, m);
   @include text(m);
   margin: 1.2rem;
   flex-shrink: 1;
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: map-get($spacing, m);
+  overflow: hidden;
 
   p {
     font-size: inherit;
@@ -453,7 +454,7 @@ html {
   }
 
   &--collapsed {
-    max-height: 200px;
+    max-height: 32rem;
   }
 
   &--collapsible#{&}--collapsed .panel__content {
@@ -474,13 +475,21 @@ html {
   &__heading {
     @include text(l);
     font-weight: 500;
-    margin: 0;
-    margin-bottom: map-get($spacing, m);
+    margin: map-get($spacing, m);
+  }
+
+  &__image {
+    height: 16rem;
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0;
   }
 
   &__content {
     overflow: hidden;
-    margin-bottom: map-get($spacing, m);
+    margin-bottom: map-get($spacing, s);
+    padding: 0 map-get($spacing, m);
+    flex-shrink: 1;
     > :first-child {
       margin-top: 0;
     }
@@ -494,6 +503,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     margin: 2.4rem -1.2rem;
+    align-items: flex-start;
   }
 
   &__toggle {
@@ -501,6 +511,7 @@ html {
     cursor: pointer;
     font-weight: 500;
     display: block;
+    margin: 0 map-get($spacing, m);
     // margin-top: map-get($spacing, m);
 
     &--read-more {
@@ -538,6 +549,14 @@ html {
     &--selected {
       font-weight: 500;
     }
+  }
+}
+
+.column-wrapper {
+  display: flex;
+
+  .column {
+    flex-basis: 50%; 
   }
 }
 

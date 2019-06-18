@@ -7,7 +7,7 @@ const Highlight = ({ children, heading, withPanel }) => {
       {withPanel ? (
         <div className="panel">
           {heading && <h3 className="panel__heading">{heading}</h3>}
-          {children}
+          <div className="panel__content">{children}</div>
         </div>
       ) : (
         children
