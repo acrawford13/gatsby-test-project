@@ -11,6 +11,7 @@ import Sidebar from './Sidebar/Sidebar';
 import SEO from '../../components/seo';
 import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
 import Note from '../atoms/Note/Note';
+import Highlight from '../atoms/Highlight/Highlight';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 
 import { IntlProvider, addLocaleData } from 'react-intl';
@@ -31,6 +32,7 @@ const slugger = new GHSlugger();
 const sluggerComps = {
   Panel: Panel,
   PanelWrapper: PanelWrapper,
+  Highlight,
   Note: Note,
   h1: function customH1({ children }) {
     const kids = stringifyChildren(children);

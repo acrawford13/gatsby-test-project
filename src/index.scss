@@ -13,13 +13,16 @@ $n300: #cfd0d5;
 $n500: #868A96;
 $n800: #3D3F46;
 $cn100: #f7f8fc;
+$cn050: #f9fafb;
 $b100: #E9F4FF;
 $white: #ffffff;
 $y100: #fffadd;
 
-$primary:$t500;
+$primary: $t500;
 $text-color: $n800;
 $overlay-background: rgba(0, 0, 0, 0.4);
+
+$content-padding-horizontal: 2.4rem;
 
 $box-shadow: 0 0.5rem 0.7rem 0 rgba(0,0,0,0.1);
 
@@ -177,7 +180,7 @@ html {
         box-shadow: $box-shadow;
         border: 1px solid $n200;
         background-color: $white;
-        padding: 3.2rem 2.4rem;
+        padding: 3.2rem $content-padding-horizontal;
         margin-top: 1.6rem;
         max-width: 120rem;
         margin-left: auto;
@@ -418,8 +421,23 @@ html {
   }
 }
 
+.highlight {
+  background-color: $cn050;
+  padding: 2.4rem $content-padding-horizontal;
+  margin-left: -($content-padding-horizontal);
+  margin-right: -($content-padding-horizontal);
+  .panel {
+    margin: 0;
+    @include text(l);
+    &__heading {
+      color: $primary;
+    }
+  }
+}
+
 .panel {
   border: 1px solid $n200;
+  background: $white;
   border-radius: 0.4rem;
   padding: map-get($spacing, m);
   @include text(m);
@@ -528,16 +546,24 @@ html {
 }
 
 @media screen and (min-width: 480px) {
+  $content-padding-horizontal: 5.5rem;
+
   // layout
   .layout {
     &--sidebar {
       .content-wrapper {
         padding: 1.6rem 3.2rem 3.2rem;
         .content {
-          padding: 5.5rem;
+          padding: $content-padding-horizontal;
         }
       }
     }
+  }
+
+  .highlight {
+    padding: 2.4rem $content-padding-horizontal;
+    margin-left: -($content-padding-horizontal);
+    margin-right: -($content-padding-horizontal);
   }
 }
 
