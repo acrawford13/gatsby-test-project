@@ -419,8 +419,8 @@ html {
 }
 
 .panel {
-  box-shadow: $box-shadow;
   border: 1px solid $n200;
+  border-radius: 0.4rem;
   padding: map-get($spacing, m);
   @include text(m);
   margin: 1.2rem;
