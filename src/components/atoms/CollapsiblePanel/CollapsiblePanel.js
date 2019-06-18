@@ -4,7 +4,7 @@ import { IntlProvider, FormattedMessage } from 'react-intl';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Panel = ({ heading, children, headingImageUrl }) => {
+const CollapsiblePanel = ({ heading, children, headingImageUrl, imageIsClickable }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
@@ -40,8 +40,20 @@ const Panel = ({ heading, children, headingImageUrl }) => {
   }, [children, windowSize]);
 
   return (
-    <div className={`panel ${isCollapsed ? 'panel--collapsed' : ''} ${isCollapsible ? 'panel--collapsible' : ''}`}>
-      {imageUrl && <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />}
+    <div
+      className={`panel
+      ${imageUrl ? 'panel--with-image' : ''}
+      ${isCollapsed ? 'panel--collapsed' : ''}
+      ${isCollapsible ? 'panel--collapsible' : ''}`}
+    >
+      {imageUrl &&
+        (imageIsClickable ? (
+          <a rel="noopener noreferrer" target="_blank" href={imageUrl}>
+            <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />
+          </a>
+        ) : (
+          <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />
+        ))}
       {heading && <h3 className="panel__heading">{heading}</h3>}
       <div className="panel__content" ref={measuredRef}>
         {children}
@@ -60,10 +72,11 @@ const Panel = ({ heading, children, headingImageUrl }) => {
   );
 };
 
-Panel.propTypes = {
+CollapsiblePanel.propTypes = {
   headingImageUrl: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
   heading: PropTypes.string,
+  imageIsClickable: PropTypes.bool,
 };
 
 export const PanelWrapper = ({ children }) => <div className="panel__wrapper">{children}</div>;
@@ -72,4 +85,4 @@ PanelWrapper.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 };
 
-export default Panel;
+export default CollapsiblePanel;

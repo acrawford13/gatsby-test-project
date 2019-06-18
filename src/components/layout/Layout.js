@@ -13,6 +13,7 @@ import Panel, { PanelWrapper } from '../atoms/Panel/Panel';
 import Column, { ColumnWrapper } from '../atoms/Column/Column';
 import CollapsiblePanel from '../atoms/CollapsiblePanel/CollapsiblePanel';
 import Note from '../atoms/Note/Note';
+import ActionButton from '../atoms/ActionButton/ActionButton';
 import Highlight from '../atoms/Highlight/Highlight';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 
@@ -38,7 +39,8 @@ const sluggerComps = {
   Column,
   ColumnWrapper,
   Highlight,
-  Note: Note,
+  Note,
+  ActionButton,
   h1: function customH1({ children }) {
     const kids = stringifyChildren(children);
     return <h1 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h1>;

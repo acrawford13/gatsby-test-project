@@ -116,7 +116,7 @@ p {
 }
 
 a {
-  color: $n800;
+  color: $t700;
   text-decoration: none;
 }
 
@@ -407,11 +407,20 @@ html {
     margin-top: 5.5rem;
   }
 
-  > h2,
+  > h2 {
+    @include heading(s);
+    font-weight: 500;
+    margin-top: 2.4rem;
+  }
+
   > h3 {
     @include text(l);
     font-weight: 500;
     margin-top: 2.4rem;
+  }
+
+  sup {
+    line-height: 0;
   }
 
   blockquote {
@@ -445,8 +454,15 @@ html {
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
-  padding-bottom: map-get($spacing, m);
+  padding: map-get($spacing, m) 0;
   overflow: hidden;
+
+  &--with-image {
+    padding-top: 0;
+    .panel__image {
+      margin-bottom: map-get($spacing, m);
+    }
+  }
 
   p {
     font-size: inherit;
@@ -454,7 +470,10 @@ html {
   }
 
   &--collapsed {
-    max-height: 32rem;
+    max-height: 20rem;
+    &.panel--with-image {
+      max-height: 32rem;
+    }
   }
 
   &--collapsible#{&}--collapsed .panel__content {
@@ -476,6 +495,7 @@ html {
     @include text(l);
     font-weight: 500;
     margin: map-get($spacing, m);
+    margin-top: 0;
   }
 
   &__image {
@@ -523,7 +543,6 @@ html {
 .note {
   background-color: $y100;
   padding: map-get($spacing, l);
-  @include text(l);
   margin: map-get($spacing, xxl) 0;
 }
 
@@ -552,11 +571,41 @@ html {
   }
 }
 
+.action-button {
+  margin: map-get($spacing, m) 0;
+  display: inline-block;
+  
+  div {
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    border-radius: 0.4rem;
+    border: 1px solid $n200;
+    background: $white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: map-get($spacing, s);
+  }
+
+  &__icon {
+    max-width: 6.2rem;
+  }
+
+  &__label {
+    text-align: center;
+    @include text(s);
+    margin-top: 1.6rem;
+  }
+}
+
 .column-wrapper {
   display: flex;
+  margin: -(map-get($spacing, s));
 
   .column {
     flex-basis: 50%; 
+    margin: map-get($spacing, s);
   }
 }
 
@@ -634,4 +683,17 @@ html {
       }
     }
   }
+}
+
+.calculation-highlighted {
+  text-align: center;
+  margin-top: 2.4rem;
+  margin-bottom: 4.8rem;
+  > p {
+    margin: 0;
+  }
+}
+
+.centered {
+  text-align: center;
 }
