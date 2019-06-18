@@ -523,6 +523,10 @@ html {
   }
 }
 
+.footnotes {
+  word-break: break-word;
+}
+
 @media screen and (min-width: 480px) {
   // layout
   .layout {
