@@ -450,6 +450,12 @@ html {
   }
 }
 
+.image-wrapper {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+}
+
 .panel {
   border: 1px solid $n200;
   background: $white;

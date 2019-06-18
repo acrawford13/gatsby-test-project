@@ -6,7 +6,7 @@ const Panel = ({ heading, children, headingImageUrl, withHeadingColor }) => {
   let imageUrl;
   if (headingImageUrl) {
     const allImages = useStaticQuery(graphql`
-      query {
+      query AllImages {
         allImageSharp {
           edges {
             node {

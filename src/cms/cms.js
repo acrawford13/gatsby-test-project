@@ -8,6 +8,7 @@ import Column, { ColumnWrapper } from '../components/atoms/Column/Column';
 import ActionButton from '../components/atoms/ActionButton/ActionButton';
 import Highlight from '../components/atoms/Highlight/Highlight';
 import Note from '../components/atoms/Note/Note';
+import Image from '../components/atoms/Image/Image';
 import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
 import { IntlProvider } from 'react-intl';
 import messages_en from '../translations/en.json';
@@ -17,7 +18,7 @@ const PreviewWindow = props => {
     // This key represents html elements used in markdown; h1, p, etc
     components: {},
     // Pass components used in the editor (and shared throughout mdx) here:
-    scope: { Panel, CollapsiblePanel, PanelWrapper, Note, Highlight, Column, ColumnWrapper, ActionButton },
+    scope: { Image, Panel, CollapsiblePanel, PanelWrapper, Note, Highlight, Column, ColumnWrapper, ActionButton },
     mdPlugins: [],
   };
 
