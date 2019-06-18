@@ -1,13 +1,32 @@
 import React, { useRef, useState, useEffect } from 'react';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { IntlProvider, FormattedMessage } from 'react-intl';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const Panel = ({ heading, children }) => {
+const Panel = ({ heading, children, headingImageUrl }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isCollapsible, setIsCollapsible] = useState(false);
 
   const measuredRef = useRef(null);
   const windowSize = useWindowSize();
+
+  const allImages = useStaticQuery(graphql`
+    query {
+      allImageSharp {
+        edges {
+          node {
+            fluid(maxWidth: 800) {
+              src
+              originalName
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const image = allImages.allImageSharp.edges.find(edge => edge.node.fluid.originalName === headingImageUrl);
+  const imageUrl = image && image.node.fluid.src;
 
   useEffect(() => {
     if (measuredRef.current !== null) {
@@ -18,6 +37,7 @@ const Panel = ({ heading, children }) => {
 
   return (
     <div className={`panel ${isCollapsed ? 'panel--collapsed' : ''} ${isCollapsible ? 'panel--collapsible' : ''}`}>
+      {imageUrl && <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />}
       {heading && <h3 className="panel__heading">{heading}</h3>}
       <div className="panel__content" ref={measuredRef}>
         {children}
