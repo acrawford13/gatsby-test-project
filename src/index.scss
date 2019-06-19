@@ -50,7 +50,7 @@ $text: (
   ),
   l: (
     font-size: 1.6rem,
-    line-height: 2.4rem,
+    line-height: 2.8rem,
   ),
   xl: (
     font-size: 1.8rem,
@@ -127,11 +127,12 @@ abbr {
   display: inline-block;
   background: white;
   padding: map-get($spacing, xxs) map-get($spacing, s);
-  box-shadow: $box-shadow;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.16);
   z-index: 2;
   border-radius: 0.4rem;
   font-style: normal;
   font-weight: normal;
+  @include text(l);
   position: absolute;
   pointer-events: none;
   max-width: 50vw;
