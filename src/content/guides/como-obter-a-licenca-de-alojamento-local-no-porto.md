@@ -119,7 +119,7 @@ Se um proprietário faturar, por exemplo, 1000€ anuais (que representa 100% do
 </PanelWrapper>
 
 
-<Highlight withPanel heading="Deixe a GuestReady ajudar">
+<Highlight withLogo withPanel heading="Deixe a GuestReady ajudar">
 TODO: ADD CALL TO ACTION
 </Highlight>
 
@@ -198,7 +198,7 @@ Aceda ao **Balcão Único Eletrónico** através do [Portal da Empresa](https://
 
 Assim que realizar o registo do Alojamento terá de aguardar 10 a 20 dias úteis para que o processo seja analisado pelas entidades competentes.	
 
-<Highlight withPanel heading="Deixe a GuestReady ajudar">
+<Highlight withLogo withPanel heading="Deixe a GuestReady ajudar">
 A submissão da declaração prévia no Balcão Único Eletrónico pode ser efetuada por uma terceira pessoa, desde que mandatada pelo titular da exploração para o efeito, nomeadamente, com poderes para assinar em nome daquele as declarações prestadas e o termo de responsabilidade. A cópia da procuração atribuindo estes poderes ao declarante deve ser inserida no Balcão Único Eletrónico ou indicado o código de consulta no caso de procuração on-line.
 </Highlight>
 
@@ -480,7 +480,7 @@ Entregar a declaração periódica do IVA (se não for isento). Caso esteja isen
 
 Entregar o Modelo 30 (rendimentos pagos a não residentes), até ao segundo mês após o pagamento do rendimento (Comissões ou Prestações de Serviço). Salienta-se que se não tiver em seu poder o [Modelo RFI21](http://info.portaldasfinancas.gov.pt/NR/rdonlyres/E115DEA4-D962-4B67-86A9-236F223D7690/0/RFI_21_uk.pdf) das entidades a que efectua pagamentos, deverá fazer retenção na fonte de 25%
 
-<Highlight withPanel heading="Deixe a GuestReady ajudar">
+<Highlight withLogo withPanel heading="Deixe a GuestReady ajudar">
 Outra das vantagens de ter a GuestReady como sua parceira na gestão do seu apartamento é saber que há alguém que faz isto por si e poder estar descansado.
 </Highlight>
 

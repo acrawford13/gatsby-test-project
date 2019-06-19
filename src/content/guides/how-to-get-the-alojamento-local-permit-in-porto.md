@@ -128,7 +128,7 @@ CIRS - Código do IRS Imposto sobre Rendimento de Pessoas Singulares (Individual
 
 </PanelWrapper>
 
-<Highlight withPanel heading="Let GuestReady help">
+<Highlight withLogo withPanel heading="Let GuestReady help">
 TODO: ADD CALL TO ACTION
 </Highlight>
 
@@ -225,7 +225,7 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
 
 Once you have registered your AL, you will have to wait 10 to 20 business days for the process to be analyzed by the competent authorities.
 
-<Highlight withPanel heading="Let GuestReady help">
+<Highlight withLogo withPanel heading="Let GuestReady help">
 The submission of the Prior Communication in the Single Electronic Desk may be carried out by a third party, provided that there is a power of attorney document provided by the business owner to do so, namely, with the power to sign on his/her behalf of the said Communication as well as the Term of Responsibility. The copy of the power of attorney attributing these powers to the third party must be inserted in the Electronic Single Counter or the reference code should be indicated in the case of an online proxy.
 </Highlight>
 
@@ -534,7 +534,7 @@ Deliver the periodic VAT return (if you are not exempt). If it is exempt, check 
 
 Deliver [Model 30](https://translate.google.com/translate?hl=en&prev=_t&sl=pt-BR&tl=en&u=http://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/modelos_formularios/irs_irc/Documents/M30-BF-04.pdf.pdf) (income paid to non-residents), until the second month after payment of the income (Commissions or Services). It should be noted that if you do not have the [Model RFI21](https://translate.google.com/translate?hl=en&prev=_t&sl=pt-BR&tl=en&u=http://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/modelos_formularios/convencoes_dupla_trib_internacional/Documents/mod2_rfi.pdf) of the entities to which you make payments, must withholding tax of 25%
 
-<Highlight withPanel heading="Let GuestReady help">
+<Highlight withLogo withPanel heading="Let GuestReady help">
 Another of the advantages of having GuestReady as your partner in managing your apartment is knowing that there is someone who does this on their own and can be rested. 
 </Highlight>
  
