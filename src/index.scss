@@ -652,6 +652,11 @@ html {
     @include text(s);
     margin-top: 1.6rem;
   }
+
+  &:hover div {
+    box-shadow: $box-shadow;
+    background-color: $cn050;
+  }
 }
 
 .column-wrapper {
