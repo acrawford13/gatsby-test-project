@@ -24,7 +24,7 @@ const Image = ({ name, maxWidth, ...props }) => {
   const fluid = image && image.node.fluid;
 
   return (
-    <div className="image-wrapper" style={{ width: maxWidth }}>
+    <div className="image-wrapper" style={{ maxWidth }}>
       <Img fluid={fluid} {...props} />
     </div>
   );
