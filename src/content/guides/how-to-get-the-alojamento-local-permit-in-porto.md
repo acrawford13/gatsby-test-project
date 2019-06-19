@@ -148,7 +148,7 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
 
 **In the Comunicação Prévia (Prior Communication) must include the following information and documents (print the checklist):**
 
-* **The autorização de utilização (usage permit) or título de utilização válido do imóvel (valid property usage title);**
+1. **The autorização de utilização (usage permit) or título de utilização válido do imóvel (valid property usage title);**
 
     A autorização de utilização (usage permit) is a legal document issued by the city council of the property, that defines the type of use allowed for a particular building or fraction: housing, or non-residential purposes (trade, services or industry). This document certifies that the property or fraction meets all legal requirements (safety against fire hazards, health, habitability, for example), to be used, whether for residential or other purposes, related to any branch of activity.
     
@@ -157,7 +157,7 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
     > **Câmara Municipal do Porto** | [www.cm-porto.pt](http://www.cm-porto.pt)  
     Praça General Humberto Delgado, n.º 266, 4000-286 Porto
 
-* **The identification card of the person in charge of the AL, mentioning the name or company name and the Número de Identificação Fiscal - NIF the (fiscal identification number);**
+2. **The identification card of the person in charge of the AL, mentioning the name or company name and the Número de Identificação Fiscal - NIF the (fiscal identification number);**
 
     <ColumnWrapper>
     <Column>
@@ -180,11 +180,11 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
     </ColumnWrapper>
 
 
-* **The establishment’s responsible person’s address;**
+3. **The establishment’s responsible person’s address;**
 
-* **Adopted business name by the establishment and its address;**
+4. **Adopted business name by the establishment and its address;**
 
-* **Capacity (rooms, beds, users) of the establishment;**
+5. **Capacity (rooms, beds, users) of the establishment;**
 
     In order to standardize information, the counting of beds (fixed or convertible) and users in alojamento local establishments, namely in hostels with bunk beds, should be carried out as follows:
 
@@ -197,31 +197,31 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
     </div>
     </div> 
 
-*  **The intended date for opening to the public;** 
+6. **The intended date for opening to the public;** 
 
-* **Name, address and phone number of person to contact in case of emergency;**
+7. **Name, address and phone number of person to contact in case of emergency;**
 
-* **Seguro de responsabilidade civil (Civil liability insurance)** that assures property damages caused to guests and third parties, arising during the providing of accommodation services[^ Please read more on the legal details: Artigo 13.º-A da Lei n.º 71/2018, de 31 de Dezembro]
+8. **Seguro de responsabilidade civil (Civil liability insurance)** that assures property damages caused to guests and third parties, arising during the providing of accommodation services[^ Please read more on the legal details: Artigo 13.º-A da Lei n.º 71/2018, de 31 de Dezembro]
 
     Although it is a requirement to obtain the permit for AL, the terms in which the insurance is to be written (such as the covered temporal scope, the possibility of exercising the right of return, admissible exclusions of liability or the establishment of deductibles that can not be invoked against the injured third party) into are not formally known and therefore, the insurance company's available offers are somewhat limited. However, we advise to still get the insurance now, but keeping yourself informed of new information provided, and then make sure the insurance you have chosen complies with the required standards, and whether or not you need to review the contract.
 
-* Copy **of the identification document** of the accountable person, in the case of a ENI, or an indication of the **código de acesso à certidão permanente do registo comercial (access code to the permanent certificate of the commercial registration)**, in case you are a Pessoa Coletiva (Company).
+8. Copy **of the identification document** of the accountable person, in the case of a ENI, or an indication of the **código de acesso à certidão permanente do registo comercial (access code to the permanent certificate of the commercial registration)**, in case you are a Pessoa Coletiva (Company).
 
-* **Termo de responsabilidade (Term of responsibility)**, subscribed by the owner of the establishment's business operation, ensuring the suitability of the building or autonomous fraction for the accommodation services providing and that it complies with applicable legal and regulatory standards;
+9. **Termo de responsabilidade (Term of responsibility)**, subscribed by the owner of the establishment's business operation, ensuring the suitability of the building or autonomous fraction for the accommodation services providing and that it complies with applicable legal and regulatory standards;
 
-* Copy of the **caderneta predial urbana (urban building document)** relating to the property in question, in case the applicant owns the property;
+10. Copy of the **caderneta predial urbana (urban building document)** relating to the property in question, in case the applicant owns the property;
 
    Caution: Please be aware that when presenting the urban building document, it must have been obtained from the Portuguese Tax Authority **less than 6 months ago**. In case there are **multiple owners** of the property you will have to present a signed **Comodato (consent agreement)** between all the parties (download here - link for consent agreement).
 
     <ActionButton download link="" iconUrl="icon-document.png" label="Download the draft consent agreement" />
 
-* Copy of the **contrato de arrendamento (lease contract)** or other **title that legitimates your business activity** and, if the lease doesn’t include authorization for the accommodation service providing, a copy of the document that contains this authorization;
+11. Copy of the **contrato de arrendamento (lease contract)** or other **title that legitimates your business activity** and, if the lease doesn’t include authorization for the accommodation service providing, a copy of the document that contains this authorization;
 
     <ActionButton download link="https://translate.google.com/translate?hl=en&prev=_t&sl=pt-BR&tl=en&u=https://drive.google.com/a/guestready.com/file/d/1JEiLUc8v1WT2KbGgSyvbIQRr4h43-dNX/view%3Fusp%3Dsharing" iconUrl="icon-document.png" label="Download the draft lease agreement" />
 
-* Copy of the **declaração de início ou alteração de atividade nas Finanças (proof  of submission of the beginning of the business activity to the Portuguese Tax Authority)** from the accountable person for the establishment including the exercising of the business activities with the CAE 55201 or 55204.
+12. Copy of the **declaração de início ou alteração de atividade nas Finanças (proof  of submission of the beginning of the business activity to the Portuguese Tax Authority)** from the accountable person for the establishment including the exercising of the business activities with the CAE 55201 or 55204.
 
-* **Ata da assembleia de condóminos (Condominium Residents Minute)** in which the authorization for installation is mentioned, in the case of hostels.
+13. **Ata da assembleia de condóminos (Condominium Residents Minute)** in which the authorization for installation is mentioned, in the case of hostels.
 
 Once you have registered your AL, you will have to wait 10 to 20 business days for the process to be analyzed by the competent authorities.
 
