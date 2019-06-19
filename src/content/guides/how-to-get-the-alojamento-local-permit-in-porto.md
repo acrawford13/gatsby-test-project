@@ -70,7 +70,7 @@ If, for example, an owner has a yearly turnover of € 1000 (which represents 10
 
 Follow these steps to open an economic activity with the ENI in the Portal das Finanças:
 
-<PanelWrapper>
+<PanelWrapper columns="3">
 
 <CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-1-portal-das-finanças-iniciar-sessão-os-seus-serviços-serviços-entregar.png">
 
@@ -90,9 +90,12 @@ Declarações: Actividade (Declarations: Activity)
 Actividade: Início de Actividade (Activity: Beginning of the Business Activity) → Entrega de Declaração de Início de Actividade (Submission of the ‘Beginning of Business Activity’ Proof) → It will open in a new window with a form where you should fill the remaining information.
 
 </CollapsiblePanel>
-<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_1.png">
+</PanelWrapper>
 
 **In the form of Beginning of the Business Activity, we advise to fill in the following form:**
+
+<PanelWrapper>
+<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_1.png">
 
 * Type of Passive Subject as Cat. B - Rendimentos Empresariais ;
 
@@ -272,7 +275,7 @@ The **opposition** to the registration may occur within 10 days or, in the case 
 
 ## Step 3 - General and Safety Requirements
 
-<ActionButton download link="https://translate.google.com/translate?hl=en&prev=_t&sl=pt-BR&tl=en&u=https://drive.google.com/a/guestready.com/file/d/1ZTQ9EYt1weLDKIXrJVhw-fWHOIm612Fw/view%3Fusp%3Dsharing" iconUrl="icon-checklist.png" label="Download the checklist" />
+<ActionButton float right download link="https://translate.google.com/translate?hl=en&prev=_t&sl=pt-BR&tl=en&u=https://drive.google.com/a/guestready.com/file/d/1ZTQ9EYt1weLDKIXrJVhw-fWHOIm612Fw/view%3Fusp%3Dsharing" iconUrl="icon-checklist.png" label="Download the checklist" />
 
 **General requirements**
 
