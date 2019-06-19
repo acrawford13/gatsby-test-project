@@ -15,9 +15,9 @@ const Abbr = ({ children, title }) => {
         }}
         onTouchStart={() => setIsHovered(false)}
         onTouchEnd={e => {
-          if (isHovered) return;
+          if (isHovered || !e.targetTouches.length) return;
           setIsHovered(true);
-          setMouseEnterPosition({ x: e.clientX, y: e.clientY });
+          setMouseEnterPosition({ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY });
         }}
       >
         {children}
