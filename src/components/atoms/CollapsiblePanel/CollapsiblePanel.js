@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import useWindowSize from '../../../hooks/useWindowSize';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 

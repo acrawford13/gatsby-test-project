@@ -40,10 +40,17 @@ Panel.propTypes = {
   withHeadingColor: PropTypes.bool,
 };
 
-export const PanelWrapper = ({ children }) => <div className="panel__wrapper">{children}</div>;
+export const PanelWrapper = ({ children, columns }) => (
+  <div className={`panel__wrapper panel__wrapper--${columns}`}>{children}</div>
+);
 
 PanelWrapper.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  columns: PropTypes.string,
+};
+
+PanelWrapper.defaultProps = {
+  columns: '2',
 };
 
 export default Panel;

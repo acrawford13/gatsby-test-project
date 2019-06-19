@@ -118,7 +118,7 @@ p {
 abbr {
   text-decoration: underline;
   font-style: italic;
-  cursor: help;
+  cursor: context-menu;
 }
 
 a {
@@ -441,6 +441,12 @@ html {
   padding: 2.4rem $content-padding-horizontal;
   margin-left: -($content-padding-horizontal);
   margin-right: -($content-padding-horizontal);
+  &__logo {
+    max-width: 10rem;
+    margin: map-get($spacing, m);
+    margin-top: 0;
+  }
+
   .panel {
     margin: 0;
     @include text(l);
@@ -591,6 +597,16 @@ html {
 .action-button {
   margin: map-get($spacing, m) 0;
   display: inline-block;
+
+  &--float-left {
+    float: left;
+    margin: 0 map-get($spacing, m);
+  }
+
+  &--float-right {
+    float: right;
+    margin: 0 map-get($spacing, m);
+  }
   
   div {
     width: 16rem;
@@ -666,8 +682,16 @@ html {
     }
   }
 
-  .panel {
-    flex-basis: calc(50% - 2.4rem);
+  .panel__wrapper--2 {
+    .panel {
+      flex-basis: calc(50% - 2.4rem);
+    }
+  }
+
+  .panel__wrapper--3 {
+    .panel {
+      flex-basis: calc(33.3333% - 2.4rem);
+    }
   }
 
   .column-wrapper {

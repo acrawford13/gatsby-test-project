@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const ActionButton = ({ label, link, download, iconUrl }) => {
+const ActionButton = ({ label, link, download, iconUrl, float, right }) => {
   let imageUrl;
   if (iconUrl) {
     const allImages = useStaticQuery(graphql`
@@ -23,7 +23,13 @@ const ActionButton = ({ label, link, download, iconUrl }) => {
     imageUrl = image && image.node.fluid.src;
   }
   return (
-    <a className="action-button" href={link} target="_blank" rel="noopener noreferrer" download={download}>
+    <a
+      className={`action-button ${float ? (right ? 'action-button--float-right' : 'action-button--float-left') : ''}`}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      download={download}
+    >
       <div>
         {imageUrl && <img className="action-button__icon" src={imageUrl} />}
         {label && <span className="action-button__label">{label}</span>}
