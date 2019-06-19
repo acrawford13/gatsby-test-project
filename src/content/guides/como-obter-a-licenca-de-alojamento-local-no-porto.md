@@ -70,21 +70,22 @@ Se um proprietário faturar, por exemplo, 1000€ anuais (que representa 100% do
 
 ### Como Fazer o Registo nas Finanças
 
-Siga estes passos para abrir actividade com o regime simplificado no portal das finanças:
-
-<PanelWrapper>
-<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-1-portal-das-finanças-iniciar-sessão-os-seus-serviços-serviços-entregar.png">
+<PanelWrapper columns="3">
+<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-1-portal-das-finanças-iniciar-sessão-os-seus-serviços-serviços-entregar.png">
 <p>Entre no Portal das Finanças → Iniciar sessão → Os seus serviços → Serviços: Entregar</p>
 </CollapsiblePanel>
-<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-2-declarações-actividade-actividade-início-de-actividade.png">
+<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-2-declarações-actividade-actividade-início-de-actividade.png">
 <p>Declarações: Actividade</p>
 </CollapsiblePanel>
-<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-3-clique-em-entrega-de-declaração-de-início-de-actividade-vai-abrir-numa-nova-janela-o-formulário.png">
+<CollapsiblePanel imageIsClickable headingImageUrl="abrir-actividade-nas-finanças-de-alojamento-local-passo-3-clique-em-entrega-de-declaração-de-início-de-actividade-vai-abrir-numa-nova-janela-o-formulário.png">
 <p>Actividade: Início de Actividade → Entrega de Declaração de Início de Actividade → Vai abrir numa nova janela o formulário onde preenche a restante informação.</p>
 </CollapsiblePanel>
-<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_1.png">
+</PanelWrapper>
 
 **No formulário de declaração de início de actividade, aconselhamos preencher da seguinte forma:**
+
+<PanelWrapper>
+<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_1.png">
 
 * Tipo de Sujeito Passivo como **Cat. B - Rendimentos. Empresariais**;
 
@@ -97,7 +98,7 @@ Siga estes passos para abrir actividade com o regime simplificado no portal das 
 </Note>
 
 </CollapsiblePanel>
-<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_2.png">
+<CollapsiblePanel imageIsClickable headingImageUrl="transmissões-intracomunitárias-finanças_2.png">
 
 * No IVA, em Volume de Negócios, **colocar o valor esperado de faturação (mensal)**, no Anexo E colocar um visto **✓** em "**Não**". Por baixo, onde diz IR → no Valor Anual de Rendimentos Estimados (IRS) → colocar o valor esperado de faturação anual (será igual ao valor mensal vezes o número de meses que faltam até ao final do ano)
 
@@ -243,7 +244,7 @@ A **oposição** ao registo pode ocorrer no prazo de 10 dias ou, no caso dos «h
 
 ## 3º Passo – Requisitos Gerais e de Segurança
 
-<ActionButton download link="https://drive.google.com/a/guestready.com/file/d/1FBuvMEug5YkC_WhcW-Rkyp5PYxvfsZPM/view?usp=sharing" iconUrl="icon-checklist.png" label="Descarregue a check-list" />
+<ActionButton float right download link="https://drive.google.com/a/guestready.com/file/d/1FBuvMEug5YkC_WhcW-Rkyp5PYxvfsZPM/view?usp=sharing" iconUrl="icon-checklist.png" label="Descarregue a check-list" />
 
 **Requisitos gerais**
 
