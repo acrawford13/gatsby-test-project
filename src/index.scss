@@ -256,6 +256,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 4rem;
   }
 
   &__content {
@@ -315,8 +316,6 @@ html {
   }
 
   .sidebar-heading {
-    margin-bottom: 6rem;
-
     &__title {
       @include heading(s);
       margin: 0;

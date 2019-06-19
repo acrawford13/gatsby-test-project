@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import logo from '../../../images/GR_Logo2x.png';
-import SidebarHeading from './components/SidebarHeading';
 
 const Sidebar = ({ post, isOpen, setIsOpen }) => (
   <>
@@ -12,7 +11,6 @@ const Sidebar = ({ post, isOpen, setIsOpen }) => (
         </span>
       </div>
       <div className="sidebar__content">
-        <SidebarHeading title={post.frontmatter.title} subtitle={post.frontmatter.subtitle} />
         <div className="sidebar__nav">
           <ul>
             {post.tableOfContents.items &&
