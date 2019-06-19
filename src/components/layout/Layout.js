@@ -15,6 +15,7 @@ import CollapsiblePanel from '../atoms/CollapsiblePanel/CollapsiblePanel';
 import Note from '../atoms/Note/Note';
 import Image from '../atoms/Image/Image';
 import ActionButton from '../atoms/ActionButton/ActionButton';
+import Abbr from '../atoms/Abbr/Abbr';
 import Highlight from '../atoms/Highlight/Highlight';
 import LanguagePicker from '../atoms/LanguagePicker/LanguagePicker';
 
@@ -43,6 +44,7 @@ const sluggerComps = {
   Note,
   ActionButton,
   Image,
+  abbr: Abbr,
   h1: function customH1({ children }) {
     const kids = stringifyChildren(children);
     return <h1 id={slugger.slug(kids).replace(/-\d+$/, '')}>{children}</h1>;

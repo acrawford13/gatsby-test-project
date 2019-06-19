@@ -118,7 +118,22 @@ p {
 abbr {
   text-decoration: underline;
   font-style: italic;
-  cursor: context-menu;
+  position: relative;
+  cursor: default;
+}
+
+.tooltip {
+  display: inline-block;
+  width: max-content;
+  background: white;
+  padding: map-get($spacing, xxs) map-get($spacing, s);
+  box-shadow: $box-shadow;
+  z-index: 2;
+  border-radius: 0.4rem;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
 }
 
 a {
