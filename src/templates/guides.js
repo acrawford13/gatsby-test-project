@@ -83,6 +83,7 @@ export const pageQuery = graphql`
         title
         subtitle
         language
+        description
         translations {
           id
           fields {
