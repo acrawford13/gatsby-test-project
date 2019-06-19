@@ -23,6 +23,8 @@ const Image = ({ name, maxWidth, ...props }) => {
   const image = allImages.allImageSharp.edges.find(edge => edge.node.fluid.originalName === name);
   const fluid = image && image.node.fluid;
 
+  if (!fluid) return false;
+
   return (
     <div className="image-wrapper" style={{ maxWidth }}>
       <Img fluid={fluid} {...props} />
