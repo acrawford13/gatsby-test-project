@@ -154,7 +154,7 @@ Access to the **Balcão Único Eletrónico (Single Electronic Counter)** through
     
     To obtain this document, you must go to the City Hall where the property is located:
 
-    **Câmara Municipal do Porto** | [www.cm-porto.pt](http://www.cm-porto.pt)  
+    > **Câmara Municipal do Porto** | [www.cm-porto.pt](http://www.cm-porto.pt)  
     Praça General Humberto Delgado, n.º 266, 4000-286 Porto
 
 * **The identification card of the person in charge of the AL, mentioning the name or company name and the Número de Identificação Fiscal - NIF the (fiscal identification number);**
@@ -229,11 +229,17 @@ Once you have registered your AL, you will have to wait 10 to 20 business days f
 The submission of the Prior Communication in the Single Electronic Desk may be carried out by a third party, provided that there is a power of attorney document provided by the business owner to do so, namely, with the power to sign on his/her behalf of the said Communication as well as the Term of Responsibility. The copy of the power of attorney attributing these powers to the third party must be inserted in the Electronic Single Counter or the reference code should be indicated in the case of an online proxy.
 </Highlight>
 
+<ColumnWrapper>
+<Column>
+
 **Help! I can’t submit my request online:**
 
 When, due to the unavailability of the electronic platforms, it is not possible to process the procedures in the said terms, communications can be made using other digital media, or using paper, and a provisional registration number is granted by the territorially competent City Council. After cessation of unavailability, the city council shall, within 5 days, enter the data in the Single Electronic Desk and assign a definitive registration number. If the prior communication is presented to the City Council on paper, a copy of the terms of responsibility subscribed by the owner of the holding and the original kept in the town hall on file must be inserted in the Single Electronic Counter.
 
-<PanelWrapper>
+</Column>
+<Column>
+
+<p>
 <CollapsiblePanel>
 
 Gabinete do Munícipe (Office of the Municipality), Room 8  
@@ -250,8 +256,10 @@ Customer Service in Person: 2nd, 3rd, 5th, 6th - 9am / 5pm; Wednesday - 9am / 8p
 The Municipality of Porto assures Mediated Service regarding requests / communications regarding the area of ​​the municipality of Porto, at the following times: Monday to Friday, from 9:00 a.m. to 12:00 p.m. and from 2.30 p.m. to 4.30 p.m., by prior appointment.
 
 </CollapsiblePanel>
-</PanelWrapper>
+</p>
  
+</Column>
+</ColumnWrapper>
 
 ### Getting the City Council Mayor feedback and Opening to the Public
 
@@ -321,10 +329,10 @@ Documents and information of mandatory posting in each AL.
 
 * Porto Consumption and Arbitration Information Center
 
-    Rua Damião de Góis, 31, Loja 6, 4050-225, Porto<br/>
-    +351 22 550 83 49 / +351 22 502 97 91<br/>
-    +351 22 502 61 09<br/>
-    cicap@cicap.pt<br/>
+    > Rua Damião de Góis, 31, Loja 6, 4050-225, Porto  
+    +351 22 550 83 49 / +351 22 502 97 91  
+    +351 22 502 61 09  
+    cicap@cicap.pt  
     Hours: Monday to Friday - 10:00 a.m. to 6:00 p.m.
 
     If the AL is in an area with more than one Arbitration Center, you can choose the one that is closest to you or simultaneously announce several Arbitration Centers.

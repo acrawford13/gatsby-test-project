@@ -50,7 +50,7 @@ $text: (
   ),
   l: (
     font-size: 1.6rem,
-    line-height: 2.8rem,
+    line-height: 2.6rem,
   ),
   xl: (
     font-size: 1.8rem,
@@ -447,8 +447,13 @@ html {
   }
 
   blockquote {
+    margin-left: map-get($spacing, xl);
+  }
+
+  > blockquote {
     color: $n500;
     margin: 0;
+    margin-left: 0;
     font-style: italic;
   }
 }
