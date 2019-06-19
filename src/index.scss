@@ -125,7 +125,6 @@ abbr {
 
 .tooltip {
   display: inline-block;
-  width: max-content;
   background: white;
   padding: map-get($spacing, xxs) map-get($spacing, s);
   box-shadow: $box-shadow;
@@ -135,6 +134,7 @@ abbr {
   font-weight: normal;
   position: absolute;
   pointer-events: none;
+  max-width: 50vw;
 }
 
 a {

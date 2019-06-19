@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Abbr = ({ children, title }) => {
   const [isHovered, setIsHovered] = useState(false);
