@@ -6,6 +6,7 @@ import Panel, { PanelWrapper } from '../components/atoms/Panel/Panel';
 import CollapsiblePanel from '../components/atoms/CollapsiblePanel/CollapsiblePanel';
 import Column, { ColumnWrapper } from '../components/atoms/Column/Column';
 import ActionButton from '../components/atoms/ActionButton/ActionButton';
+import Abbr from '../components/atoms/Abbr/Abbr';
 import Highlight from '../components/atoms/Highlight/Highlight';
 import Note from '../components/atoms/Note/Note';
 import Image from '../components/atoms/Image/Image';
@@ -16,10 +17,22 @@ import messages_en from '../translations/en.json';
 const PreviewWindow = props => {
   const mdxProps = {
     // This key represents html elements used in markdown; h1, p, etc
-    components: {},
+    components: {
+      abbr: Abbr,
+    },
     // Pass components used in the editor (and shared throughout mdx) here:
-    scope: { Image, Panel, CollapsiblePanel, PanelWrapper, Note, Highlight, Column, ColumnWrapper, ActionButton },
-    mdPlugins: [],
+    scope: {
+      Image,
+      Panel,
+      CollapsiblePanel,
+      PanelWrapper,
+      Note,
+      Highlight,
+      Column,
+      ColumnWrapper,
+      ActionButton,
+    },
+    mdPlugins: [require('remark-abbr')],
   };
 
   return (

@@ -109,7 +109,6 @@ body {
   padding: 0;
   height: 100%;
   color: $n800;
-  overflow: hidden;
 }
 
 p {
@@ -187,6 +186,7 @@ html {
   position: relative;
   background-color: $cn100;
   height: 100%;
+  overflow: hidden;
 
   &--sidebar {
     display: flex;
