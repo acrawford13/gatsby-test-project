@@ -61,33 +61,29 @@ const sluggerComps = {
   code: 'div',
 };
 
-const Layout = ({ children, post, translations }) => {
+const Layout = ({ sidebar, alternate_languages, current_language, children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <IntlProvider locale={post.frontmatter.language} messages={messages[post.frontmatter.language]}>
-      <>
-        <SEO
-          description={post.frontmatter.description}
-          title={post.frontmatter.title}
-          lang={post.frontmatter.language}
-        />
-        <div className="layout layout--sidebar">
-          <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} post={post} />
-          <main className="content-wrapper">
-            <div className="top-bar">
-              <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
-                <img src={menuToggle} />
-              </div>
-              <LanguagePicker currentLanguage={post.frontmatter.language} translations={translations} />
+    // <IntlProvider locale={post.frontmatter.language} messages={messages[post.frontmatter.language]}>
+    <>
+      {/* <SEO description={post.frontmatter.description} title={post.frontmatter.title} lang={post.frontmatter.language} /> */}
+      <div className="layout layout--sidebar">
+        <Sidebar setIsOpen={setIsSidebarOpen} isOpen={isSidebarOpen} sidebar={sidebar} />
+        <main className="content-wrapper">
+          <div className="top-bar">
+            <div onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="menu-toggle">
+              <img src={menuToggle} />
             </div>
-            <MDXProvider components={sluggerComps}>
-              <div className="content">{children}</div>
-            </MDXProvider>
-          </main>
-        </div>
-      </>
-    </IntlProvider>
+            <LanguagePicker currentLanguage={current_language} translations={alternate_languages} />
+          </div>
+          <div className="content">
+            <div className="inner-content">{children}</div>
+          </div>
+        </main>
+      </div>
+    </>
+    // </IntlProvider>
   );
 };
 

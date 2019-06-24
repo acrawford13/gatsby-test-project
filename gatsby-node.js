@@ -7,16 +7,11 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMdx(limit: 1000) {
+      allPrismicGuide(limit: 1000) {
         edges {
           node {
             id
-            fields {
-              slug
-            }
-            frontmatter {
-              templateKey
-            }
+            slugs
           }
         }
       }
@@ -27,13 +22,13 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMdx.edges;
+    const posts = result.data.allPrismicGuide.edges;
 
     posts.forEach(edge => {
       const id = edge.node.id;
       createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
+        path: edge.node.slugs[0],
+        component: path.resolve(`src/templates/guides.js`),
         // additional data can be passed via context
         context: {
           id,
@@ -43,14 +38,14 @@ exports.createPages = ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `Mdx`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
-  }
-};
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions;
+//   if (node.internal.type === `Mdx`) {
+//     const value = createFilePath({ node, getNode });
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     });
+//   }
+// };

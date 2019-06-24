@@ -42,17 +42,17 @@ const CollapsiblePanel = ({ heading, children, headingImageUrl, imageIsClickable
   return (
     <div
       className={`panel
-      ${imageUrl ? 'panel--with-image' : ''}
+      ${headingImageUrl ? 'panel--with-image' : ''}
       ${isCollapsed ? 'panel--collapsed' : ''}
       ${isCollapsible ? 'panel--collapsible' : ''}`}
     >
-      {imageUrl &&
+      {headingImageUrl &&
         (imageIsClickable ? (
-          <a rel="noopener noreferrer" target="_blank" href={imageUrl}>
-            <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />
+          <a rel="noopener noreferrer" target="_blank" href={headingImageUrl}>
+            <div className="panel__image" style={{ backgroundImage: `url(${headingImageUrl})` }} />
           </a>
         ) : (
-          <div className="panel__image" style={{ backgroundImage: `url(${imageUrl})` }} />
+          <div className="panel__image" style={{ backgroundImage: `url(${headingImageUrl})` }} />
         ))}
       {heading && <h3 className="panel__heading">{heading}</h3>}
       <div className="panel__content" ref={measuredRef}>
@@ -60,12 +60,12 @@ const CollapsiblePanel = ({ heading, children, headingImageUrl, imageIsClickable
       </div>
       {isCollapsible && isCollapsed && (
         <span className="panel__toggle panel__toggle--read-more" onClick={() => setIsCollapsed(false)}>
-          <FormattedMessage id="app.readMore" />
+          {/* <FormattedMessage id="app.readMore" /> */}Read more
         </span>
       )}
       {isCollapsible && !isCollapsed && (
         <span className="panel__toggle" onClick={() => setIsCollapsed(true)}>
-          <FormattedMessage id="app.readLess" />
+          {/* <FormattedMessage id="app.readLess" /> */}Read less
         </span>
       )}
     </div>

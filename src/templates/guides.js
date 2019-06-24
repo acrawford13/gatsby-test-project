@@ -1,18 +1,83 @@
 import React from 'react';
+import Parser from 'html-react-parser';
+
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/Layout';
 import PageHeading from '../components/molecules/PageHeading/PageHeading';
 import Content, { HTMLContent } from '../components/Content';
 import { graphql } from 'gatsby';
+import Panel, { PanelWrapper } from '../components/atoms/Panel/Panel';
+import CollapsiblePanel from '../components/atoms/CollapsiblePanel/CollapsiblePanel';
+import TextWithDefinitions from '../components/TextWithDefinitions';
+import Abbr from '../components/atoms/Abbr/Abbr';
 
-export const GuidesTemplate = ({ title, subtitle, content, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+const myParser = ({ definitions, html }) => {
+  const abbrRegex = new RegExp(
+    `(${definitions
+      .filter(t => t.source && t.meaning)
+      .map(t => t.source)
+      .join('|')})`,
+    'g',
+  );
+  return Parser(html.replace(abbrRegex, `<abbr>$1</abbr>`), {
+    replace: domNode => {
+      if (domNode.name === 'abbr') {
+        if (!domNode.children || !domNode.children[0]) return domNode;
+        const text = domNode.children[0].data;
+        return <Abbr title={definitions.find(t => t.source === text).meaning}>{text}</Abbr>;
+      }
+    },
+  });
+};
+
+export const GuidesTemplate = ({
+  title,
+  subtitle,
+  body,
+  definitions,
+  alternate_languages,
+  current_language,
+  sidebar,
+}) => {
   return (
-    <>
-      <PageHeading title={title} subtitle={subtitle} />
-      <PageContent content={content} />
-    </>
+    <Layout current_language={current_language} alternate_languages={alternate_languages} sidebar={sidebar}>
+      <>
+        <PageHeading title={title} subtitle={subtitle} />
+        {body.map(slice => {
+          switch (slice.slice_type) {
+            case 'collapsible_panel_section':
+              return (
+                <PanelWrapper>
+                  {slice.items.map(item => (
+                    <CollapsiblePanel
+                      key={item.heading.text}
+                      headingImageUrl={item.image.url}
+                      heading={item.heading.text}
+                    >
+                      {myParser({ definitions, html: item.content.text })}
+                    </CollapsiblePanel>
+                  ))}
+                </PanelWrapper>
+              );
+            case 'level_1_heading':
+              return (
+                <h1 id={slice.primary.heading.text.toLowerCase().replace(/\s/g, '-')}>
+                  {myParser({ definitions, html: slice.primary.heading.text })}
+                </h1>
+              );
+            case 'level_2_heading':
+              return (
+                <h2 id={slice.primary.heading.text.toLowerCase().replace(/\s/g, '-')}>
+                  {myParser({ definitions, html: slice.primary.heading.text })}
+                </h2>
+              );
+            case 'text':
+              return myParser({ definitions, html: slice.primary.content.html });
+          }
+        })}
+      </>
+    </Layout>
   );
 };
 
@@ -25,16 +90,19 @@ GuidesTemplate.propTypes = {
 
 class Guides extends React.Component {
   render() {
-    const { mdx: post } = this.props.data;
+    const { prismicGuide: post } = this.props.data;
     return (
-      <Layout post={post} translations={post.frontmatter.translations}>
-        <GuidesTemplate
-          title={post.frontmatter.title}
-          subtitle={post.frontmatter.subtitle}
-          content={post.code.body}
-          contentComponent={HTMLContent}
-        />
-      </Layout>
+      // <Layout post={post} translations={[]}>
+      <GuidesTemplate
+        title={post.content.title.text}
+        subtitle={post.content.subtitle.text}
+        body={post.content.body}
+        definitions={post.content.definition}
+        sidebar={post.sidebar}
+        alternate_languages={post.alternate_languages}
+        current_language={post.lang}
+      />
+      // </Layout>
     );
   }
 }
@@ -74,27 +142,90 @@ Guides.propTypes = {
 
 export const pageQuery = graphql`
   query GuideById($id: String!) {
-    mdx(id: { eq: $id }) {
+    prismicGuide(id: { eq: $id }) {
       id
-      code {
-        body
+      alternate_languages {
+        lang
       }
-      frontmatter {
-        title
-        subtitle
-        language
-        description
-        translations {
-          id
-          fields {
-            slug
+      lang
+      sidebar: data {
+        body {
+          ... on PrismicGuideBodyLevel2Heading {
+            id
+            slice_type
+            primary {
+              heading {
+                text
+              }
+            }
           }
-          frontmatter {
-            language
+          ... on PrismicGuideBodyLevel1Heading {
+            id
+            slice_type
+            primary {
+              heading {
+                text
+              }
+            }
           }
         }
       }
-      tableOfContents
+      content: data {
+        title {
+          text
+        }
+        subtitle {
+          text
+        }
+        body {
+          ... on PrismicGuideBodyCollapsiblePanelSection {
+            id
+            slice_type
+            items {
+              heading {
+                text
+              }
+              content {
+                text
+              }
+              image {
+                url
+              }
+            }
+          }
+          ... on PrismicGuideBodyLevel2Heading {
+            id
+            slice_type
+            primary {
+              heading {
+                text
+              }
+            }
+          }
+          ... on PrismicGuideBodyLevel1Heading {
+            id
+            slice_type
+            primary {
+              heading {
+                text
+              }
+            }
+          }
+          ... on PrismicGuideBodyText {
+            id
+            slice_type
+            primary {
+              content {
+                html
+              }
+            }
+          }
+        }
+        definition {
+          source
+          meaning
+        }
+      }
     }
   }
 `;

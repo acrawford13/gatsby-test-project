@@ -4,6 +4,8 @@ import { Link } from 'gatsby';
 import { availableLanguages } from '../../../constants.js';
 
 const LanguagePicker = ({ translations, currentLanguage }) => {
+  console.log('translations:', translations);
+  console.log('currentLanguage:', currentLanguage);
   if (!translations || !translations.length) return false;
   return (
     <ul className="language-picker">
@@ -16,11 +18,11 @@ const LanguagePicker = ({ translations, currentLanguage }) => {
           );
         }
 
-        const translatedPage = translations.find(translation => translation.frontmatter.language === language);
+        const translatedPage = translations.find(translation => translation.lang === language);
         if (translatedPage) {
           return (
-            <li key={translatedPage.frontmatter.language} className="language-picker__option">
-              <Link to={translatedPage.fields.slug}>{availableLanguages[translatedPage.frontmatter.language]}</Link>
+            <li key={translatedPage.lang} className="language-picker__option">
+              <Link to={translatedPage.lang}>{availableLanguages[translatedPage.lang]}</Link>
             </li>
           );
         }

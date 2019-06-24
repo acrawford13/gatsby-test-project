@@ -1,4 +1,4 @@
 export const availableLanguages = {
-  en: 'English',
-  pt: 'Português',
+  'en-au': 'English',
+  'pt-pt': 'Português',
 };

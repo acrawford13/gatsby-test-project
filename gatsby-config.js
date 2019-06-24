@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `GuestReady`,
@@ -22,24 +26,24 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: ['.mdx', '.md'],
-        remarkPlugins: [require('remark-abbr')],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1035,
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-mdx`,
+    //   options: {
+    //     extensions: ['.mdx', '.md'],
+    //     remarkPlugins: [require('remark-abbr')],
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: 'gatsby-remark-relative-images',
+    //       },
+    //       {
+    //         resolve: 'gatsby-remark-images',
+    //         options: {
+    //           maxWidth: 1035,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -54,17 +58,16 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: `gatsby-source-prismic`,
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
+        repositoryName: `guide-testing`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
   ],
   mapping: {
-    'Mdx.frontmatter.translations': 'Mdx.frontmatter.title',
+    // 'Mdx.frontmatter.translations': 'Mdx.frontmatter.title',
+    'PrismicGuide.alternate_languages.id': 'PrismicGuide.prismicId',
   },
 };

@@ -9,7 +9,6 @@
     "@mdx-js/react": "^1.0.20",
     "gatsby": "^2.8.6",
     "gatsby-image": "^2.1.2",
-    "gatsby-mdx": "^0.6.3",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-netlify": "^2.0.17",
     "gatsby-plugin-netlify-cms": "^4.0.1",
@@ -20,8 +19,10 @@
     "gatsby-remark-images": "^3.0.16",
     "gatsby-remark-relative-images": "^0.2.2",
     "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-transformer-sharp": "^2.1.21",
     "github-slugger": "^1.2.1",
+    "html-react-parser": "^0.7.1",
     "netlify-cms": "^2.9.1",
     "netlify-cms-widget-mdx": "^0.4.0",
     "node-sass": "^4.12.0",
@@ -33,6 +34,7 @@
     "remark-abbr": "^1.3.1"
   },
   "devDependencies": {
+    "dotenv": "^8.0.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.0",
