@@ -550,58 +550,58 @@ Another of the advantages of having GuestReady as your partner in managing your 
 Final Note: This guide is intended to help and guide the future host to obtain a local housing permit. Compliance with the legal regulations in force regarding the proper maintenance of the local accommodation unit after obtaining the license are not covered in this guide.
 </Note>
 
-*[Estabelecimentos de Alojamento Local]: Short term rentals
-*[Taxa Municipal Turística]: Municipal Tourist Tax
-*[Serviço de Estrangeiros e Fronteiras]: borders and foreigners agency
-*[Licença de Alojamento Local]: Short Term Rental Permit
-*[Oficial de Contas]: official accountant
-*[Regime de Contabilidade Organizada]: organized accounting regime
-*[Empresário em Nome Individual]: Standard Sole Trader
-*[Iniciar Sessão]: Login
-*[Os Seus Serviços]: Your Services
-*[Serviços: Entregar]: Services: Deliver
-*[Declarações: Actividade]: Declarações: Actividade
 *[Actividade: Início de Actividade]: Activity: Beginning of the Business Activity
-*[Entrega de Declaração de Início de Actividade]: Submission of the ‘Beginning of Business Activity’ Proof
-*[IVA]: VAT
-*[Volume de Negócios]: turnover
-*[valor esperado de faturação]: (monthy) expected billing amount
-*[Não]: No
-*[Valor Anual de Rendimentos Estimados]: Estimated Annual Income
-*[Tipo de Operações]: Operations Type
-*[Efectua ou adquire prestações de serviços intracomunitários]: Provides or acquires Intra-Community services
-*[Contabilidade]: Accounting
-*[Registo do Alojamento Local]: Short Term Rental Registration
-*[Câmara Municipal]: City Council
-*[Comunicação Prévia]: Prior Communication
-*[Presidente da Câmara]: City Council Mayor
-*[Balcão Único Eletrónico]: Single Electronic Desk
-*[Chave Móvel Digital]: Digital Mobile Key
-*[Gabinete do Munícipe]: Office of the Municipality
-*[número de Alojamento Local]: short term rental registration number
-*[Lojas de Cidadão]: Citizens center
-*[Portal da Empresa]: Business Portal
-*[autorização de utilização]: usage permit
-*[título de utilização válido do imóvel]: valid property usage title
-*[Número de Identificação Fiscal]: fiscal identification number
-*[Seguro de responsabilidade civil]: Civil liability insurance
-*[código de acesso à certidão permanente do registo comercial]: access code to the permanent certificate of the commercial registration
-*[Pessoa Coletiva]: Company
-*[Termo de responsabilidade]: Term of responsibility
-*[caderneta predial urbana]: urban building document
-*[Comodato]: consent agreement
-*[contrato de arrendamento]: lease contract
-*[declaração de início ou alteração de atividade nas Finanças]: proof of submission of the beginning of the business activity to the Portuguese Tax Authority
+*[áreas de contenção]: containment areas
 *[Ata da assembleia de condóminos]: Condominium Residents Minute
+*[Autoridade de Segurança Alimentar e Económica]: Food and Economic Security Authority
+*[Autoridade Nacional de Proteção Civil]: National Civil Protection Authority
+*[Autoridade Tributária e Aduaneira]: Portuguese Tax Authority
+*[autorização de utilização]: usage permit
+*[Balcão Único Eletrónico]: Single Electronic Desk
+*[caderneta predial urbana]: urban building document
+*[Câmara Municipal]: City Council
 *[Centro de Arbitragem de Conflitos de Consumo]: Consumption Disputes Arbitration Center
 *[Centro de Arbitragem]: Arbitration Center
-*[Entidade de Resolução Alternativa de Litígios de Consumo]: Alternative Dispute Resolution Body
-*[Livro de Reclamações]: Complaint Book
+*[Chave Móvel Digital]: Digital Mobile Key
+*[código de acesso à certidão permanente do registo comercial]: access code to the permanent certificate of the commercial registration
+*[Comodato]: consent agreement
+*[Comunicação Prévia]: Prior Communication
+*[Contabilidade]: Accounting
+*[contrato de arrendamento]: lease contract
+*[declaração de início ou alteração de atividade nas Finanças]: proof of submission of the beginning of the business activity to the Portuguese Tax Authority
+*[Declarações: Actividade]: Declarações: Actividade
 *[Direcção Geral de Saúde]: Directorate-General for Health
-*[Autoridade Tributária e Aduaneira]: Portuguese Tax Authority
-*[Rendimentos empresariais e profissionais]: Business and professional earnings
-*[Autoridade Nacional de Proteção Civil]: National Civil Protection Authority
-*[Autoridade de Segurança Alimentar e Económica]: Food and Economic Security Authority
-*[áreas de contenção]: containment areas
+*[Efectua ou adquire prestações de serviços intracomunitários]: Provides or acquires Intra-Community services
+*[Empresário em Nome Individual]: Standard Sole Trader
+*[Entidade de Resolução Alternativa de Litígios de Consumo]: Alternative Dispute Resolution Body
+*[Entrega de Declaração de Início de Actividade]: Submission of the ‘Beginning of Business Activity’ Proof
+*[Estabelecimentos de Alojamento Local]: Short term rentals
 *[freguesia]: parish
+*[Gabinete do Munícipe]: Office of the Municipality
+*[Iniciar Sessão]: Login
+*[IVA]: VAT
+*[Licença de Alojamento Local]: Short Term Rental Permit
+*[Livro de Reclamações]: Complaint Book
+*[Lojas de Cidadão]: Citizens center
+*[Não]: No
+*[número de Alojamento Local]: short term rental registration number
+*[Número de Identificação Fiscal]: fiscal identification number
+*[Oficial de Contas]: official accountant
+*[Os Seus Serviços]: Your Services
+*[Pessoa Coletiva]: Company
+*[Portal da Empresa]: Business Portal
+*[Presidente da Câmara]: City Council Mayor
+*[Regime de Contabilidade Organizada]: organized accounting regime
+*[Registo do Alojamento Local]: Short Term Rental Registration
+*[Rendimentos empresariais e profissionais]: Business and professional earnings
 *[residência fiscal]: official address for tax purposes
+*[Seguro de responsabilidade civil]: Civil liability insurance
+*[Serviço de Estrangeiros e Fronteiras]: borders and foreigners agency
+*[Serviços: Entregar]: Services: Deliver
+*[Taxa Municipal Turística]: Municipal Tourist Tax
+*[Termo de responsabilidade]: Term of responsibility
+*[Tipo de Operações]: Operations Type
+*[título de utilização válido do imóvel]: valid property usage title
+*[Valor Anual de Rendimentos Estimados]: Estimated Annual Income
+*[valor esperado de faturação]: (monthy) expected billing amount
+*[Volume de Negócios]: turnover
