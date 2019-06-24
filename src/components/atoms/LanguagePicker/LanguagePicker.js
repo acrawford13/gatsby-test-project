@@ -7,15 +7,25 @@ const LanguagePicker = ({ translations, currentLanguage }) => {
   if (!translations || !translations.length) return false;
   return (
     <ul className="language-picker">
-      <li key={currentLanguage} className="language-picker__option language-picker__option--selected">
-        {availableLanguages[currentLanguage]}
-      </li>
-      {translations.map(translation => {
-        return (
-          <li key={translation.frontmatter.language} className="language-picker__option">
-            <Link to={translation.fields.slug}>{availableLanguages[translation.frontmatter.language]}</Link>
-          </li>
-        );
+      {Object.keys(availableLanguages).map(language => {
+        if (currentLanguage === language) {
+          return (
+            <li key={currentLanguage} className="language-picker__option language-picker__option--selected">
+              {availableLanguages[currentLanguage]}
+            </li>
+          );
+        }
+
+        const translatedPage = translations.find(translation => translation.frontmatter.language === language);
+        if (translatedPage) {
+          return (
+            <li key={translatedPage.frontmatter.language} className="language-picker__option">
+              <Link to={translatedPage.fields.slug}>{availableLanguages[translatedPage.frontmatter.language]}</Link>
+            </li>
+          );
+        }
+
+        return null;
       })}
     </ul>
   );
